@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --btn-text-case: none;
+}
+
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../dist/assets/background.jpg");
+}
+
+/*
+.btn-md {
+  @apply h-10 min-h-8;
+}
+
+@screen md {
+  .md\:btn-lg {
+    @apply h-14 min-h-12 !important;
+  }
+}
+
+#download {
+  @apply px-3 md:px-4;
+}
+*/
+
+#more {
+  @apply px-2 md:px-3;
+}
+
+.tooltip:before {
+  @apply text-base;
+}
