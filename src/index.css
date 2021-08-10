@@ -26,6 +26,10 @@
 }
 */
 
+#caption {
+  @apply leading-10;
+}
+
 #more {
   @apply px-2 md:px-3;
 }

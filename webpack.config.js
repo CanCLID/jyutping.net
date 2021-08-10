@@ -1,4 +1,6 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -12,20 +14,12 @@ module.exports = {
       {
         test: /\.ts$/i,
         include: path.resolve(__dirname, "./src"),
-        use: [
-          "ts-loader",
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/preset-env"],
-            },
-          },
-        ],
+        use: ["ts-loader"],
       },
       {
         test: /\.css$/i,
         include: path.resolve(__dirname, "./src"),
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
   },
@@ -33,4 +27,10 @@ module.exports = {
     contentBase: path.resolve(__dirname, "./dist"),
     watchContentBase: true,
   },
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
 };

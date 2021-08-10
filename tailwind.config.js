@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ["./dist/*.html", "./src/*.css", "./src/*.ts"],
-  darkMode: false, // or 'media' or 'class'
+  purge: ["./src/**/*"],
   theme: {
     fontFamily: {
       sans: [
@@ -18,9 +17,6 @@ module.exports = {
       ],
       serif: ["SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [require("daisyui")],
   daisyui: {
