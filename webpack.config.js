@@ -14,12 +14,27 @@ module.exports = {
       {
         test: /\.ts$/i,
         include: path.resolve(__dirname, "./src"),
-        use: ["ts-loader"],
+        use: "ts-loader",
       },
       {
         test: /\.css$/i,
         include: path.resolve(__dirname, "./src"),
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.html$/i,
+        include: path.resolve(__dirname, "./src"),
+        use: "underscore-template-loader",
+      },
+      {
+        test: /\.svg$/i,
+        include: path.resolve(__dirname, "./src"),
+        use: "html-loader",
+      },
+      {
+        test: /\.(jpg|png)$/i,
+        include: path.resolve(__dirname, "./src"),
+        use: "url-loader",
       },
     ],
   },

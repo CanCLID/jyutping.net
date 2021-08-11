@@ -16,60 +16,18 @@
   </head>
   <body>
     <div id="container">
-      <!--
-      <header
-        id="header"
-        class="
-          navbar
-          absolute
-          top-3
-          left-3
-          right-3
-          max-w-6xl
-          mx-auto
-          bg-base-200
-          text-base-content
-          shadow-lg
-          rounded-box
-        "
-      >
-        <div class="flex-none">
-          <img alt="粵語輸入法" src="assets/logo.svg" class="w-10" />
-        </div>
-        <div class="flex-1 px-2 mx-2">
-          <span class="text-lg">粵拼輸入法</span>
-        </div>
-        <div class="flex-none">
-          <button class="btn btn-primary">下載</button>
-        </div>
-      </header>
-      -->
       <main>
-        <section id="hero" class="hero min-h-screen text-neutral-content">
-          <div class="flex-col hero-content px-12 w-full max-w-6xl lg:flex-row-reverse">
-            <img alt="粵語輸入法" src="assets/hero.png" class="mb-3 md:mb-4 lg:mb-0 lg:ml-4 rounded-lg shadow-2xl" />
+        <section id="hero">
+          <div>
+            <img alt="粵語輸入法" src="<%= require("./assets/hero.png").default %>" />
             <div>
-              <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold whitespace-nowrap">
-                用你嘅母語——粵語打字。
-              </h1>
-              <p id="caption" class="my-4 md:my-6 lg:my-8 text-lg md:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
-                下載由香港語言學學會提供嘅 Rime 粵語拼音輸入法，<wbr />即裝即用！
-              </p>
+              <h1>用你嘅母語——粵語打字。</h1>
+              <p>下載由香港語言學學會提供嘅 Rime 粵語拼音輸入法，<wbr />即裝即用！</p>
               <div class="btn-group">
-                <button
-                  id="download"
-                  class="btn btn-md shadow-md md:btn-lg btn-primary border-0 border-r-2 border-blue-400"
-                >
-                  <img alt="Windows" src="assets/windows.svg" class="w-4 md:w-7 mr-1.5 md:mr-3" />
-                  下載 Windows 版
+                <button class="btn-download border-0 border-r-2 border-blue-400">
+                  <%= require("./assets/windows.svg").default %> 下載 Windows 版
                 </button>
-                <button
-                  id="more"
-                  class="btn btn-md shadow-md md:btn-lg btn-primary tooltip tooltip-bottom tooltip-secondary"
-                  data-tip="其他版本"
-                >
-                  <img alt="其他版本" src="assets/chevron.svg" class="w-3 md:w-4" />
-                </button>
+                <button id="more" data-tip="其他版本"><%= require("./assets/chevron.svg").default %></button>
               </div>
             </div>
           </div>
@@ -93,21 +51,21 @@
             <div class="flex flex-col sm:flex-row mt-16 lg:px-24 gap-4">
               <button class="card shadow-md bg-base-100 text-base-content w-full">
                 <div class="card-body mx-auto">
-                  <img alt="Windows" src="assets/windows.svg" class="h-20 filter invert" />
+                  <%= require("./assets/windows.svg").default %>
                   <h4 class="card-title text-2xl lg:text-3xl mt-4">Windows</h4>
                   <p class="text-lg lg:text-xl font-light">小狼毫 Weasel</p>
                 </div>
               </button>
               <button class="card shadow-md bg-base-100 text-base-content w-full">
                 <div class="card-body mx-auto">
-                  <img alt="Mac" src="assets/mac.svg" class="h-20 filter invert" />
+                  <%= require("./assets/mac.svg").default %>
                   <h4 class="card-title text-2xl lg:text-3xl mt-4">Mac</h4>
                   <p class="text-lg lg:text-xl font-light">鼠鬚管 Squirrel</p>
                 </div>
               </button>
               <button class="card shadow-md bg-base-100 text-base-content w-full">
                 <div class="card-body mx-auto">
-                  <img alt="Linux" src="assets/linux.svg" class="h-20 filter invert" />
+                  <%= require("./assets/linux.svg").default %>
                   <h4 class="card-title text-2xl lg:text-3xl mt-4">Linux</h4>
                   <p class="text-lg lg:text-xl font-light">IBus</p>
                 </div>
@@ -140,6 +98,5 @@
         </section>
       </main>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>
