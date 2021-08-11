@@ -20,41 +20,57 @@
     p {
       @apply my-4 md:my-6 lg:my-8 text-lg md:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap leading-10;
     }
+    #btn-more {
+      @apply px-2 md:px-3;
+      svg {
+        @apply w-3 md:w-4 mr-0;
+      }
+      &:before {
+        @apply text-base;
+      }
+    }
   }
 }
 
-.btn-download {
+section:not(#hero) {
+  @apply py-20 lg:py-36;
+  > div {
+    @apply px-12 max-w-6xl mx-auto text-center;
+    h2 {
+      @apply text-3xl lg:text-5xl font-semibold;
+    }
+    h3 {
+      @apply mt-8 text-2xl;
+    }
+    p {
+      @apply mt-8 text-xl font-light;
+    }
+  }
+}
+
+#platforms {
+  @apply flex flex-col flex-wrap sm:flex-row mt-16 lg:px-24 gap-4;
+  button {
+    flex: 1 1 30%;
+    @apply card shadow-md bg-base-100 text-base-content;
+    > div {
+      @apply card-body mx-auto;
+      svg {
+        @apply h-20;
+      }
+      h4 {
+        @apply card-title text-2xl lg:text-3xl mt-4;
+      }
+      p {
+        @apply mt-0 text-lg lg:text-xl font-light;
+      }
+    }
+  }
+}
+
+.btn-main {
   @apply btn btn-md shadow-md md:btn-lg btn-primary;
-}
-#more {
-  @apply btn btn-md shadow-md md:btn-lg btn-primary px-2 md:px-3 tooltip tooltip-bottom tooltip-secondary;
-}
-.btn-download svg {
-  @apply w-4 md:w-7 mr-1.5 md:mr-3;
-}
-#more svg {
-  @apply w-3 md:w-4;
-}
-/*
-.btn-md {
-  @apply h-10 min-h-8;
-}
-
-@screen md {
-  .md\:btn-lg {
-    @apply h-14 min-h-12 !important;
+  svg {
+    @apply w-4 md:w-7 mr-1.5 md:mr-3;
   }
-}
-
-#download {
-  @apply px-3 md:px-4;
-}
-*/
-
-#more {
-  @apply;
-}
-
-.tooltip:before {
-  @apply text-base;
 }
