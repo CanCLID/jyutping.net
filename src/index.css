@@ -6,6 +6,10 @@
   --btn-text-case: none;
 }
 
+kbd {
+  @apply kbd kbd-sm align-text-bottom;
+}
+
 #hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/background.jpg");
   @apply hero min-h-screen text-neutral-content;
@@ -49,10 +53,10 @@ section:not(#hero) {
 }
 
 #platforms {
-  @apply flex flex-col flex-wrap sm:flex-row mt-16 lg:px-24 gap-4;
-  button {
-    flex: 1 1 30%;
-    @apply card shadow-md bg-base-100 text-base-content;
+  @apply flex flex-col flex-wrap sm:flex-row justify-center mt-16 lg:px-24 gap-4;
+  a {
+    flex: 0 0 256px;
+    @apply btn btn-primary card shadow-xl h-auto; /* bg-base-100 text-base-content; */
     > div {
       @apply card-body mx-auto;
       svg {
@@ -73,4 +77,111 @@ section:not(#hero) {
   svg {
     @apply w-4 md:w-7 mr-1.5 md:mr-3;
   }
+}
+
+.tabbed {
+  @apply mt-6;
+  > input {
+    @apply hidden;
+  }
+  .tabs {
+    @apply mx-6;
+    > label {
+      @apply tab tab-lg tab-lifted;
+    }
+  }
+  .tab-content {
+    border-radius: var(--tab-radius, 0.5rem);
+    border: var(--tab-border, 1px) solid hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
+    @apply p-8 relative bottom-px;
+    > div {
+      @apply hidden;
+      p:first-child {
+        @apply mt-0 !important;
+      }
+    }
+  }
+}
+
+.tabbed > input:nth-child(1):checked ~ .tabs > label:nth-child(1),
+.tabbed > input:nth-child(2):checked ~ .tabs > label:nth-child(2),
+.tabbed > input:nth-child(3):checked ~ .tabs > label:nth-child(3),
+.tabbed > input:nth-child(4):checked ~ .tabs > label:nth-child(4),
+.tabbed > input:nth-child(5):checked ~ .tabs > label:nth-child(5) {
+  @apply tab-active-copy z-50;
+}
+
+.tabbed > input:nth-child(1):checked ~ .tab-content > div:nth-child(1),
+.tabbed > input:nth-child(2):checked ~ .tab-content > div:nth-child(2),
+.tabbed > input:nth-child(3):checked ~ .tab-content > div:nth-child(3),
+.tabbed > input:nth-child(4):checked ~ .tab-content > div:nth-child(4),
+.tabbed > input:nth-child(5):checked ~ .tab-content > div:nth-child(5) {
+  @apply block;
+}
+
+/*
+ * tab-active-copy
+ * copied tab-active class from daisyui
+ * due to css compiling issues
+ */
+.tab-active-copy {
+  border-color: hsla(var(--bc) / var(--tw-border-opacity, 1));
+  --tw-border-opacity: 1;
+  --tw-text-opacity: 1;
+  color: hsla(var(--bc) / var(--tw-text-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: hsla(var(--b1) / var(--tw-bg-opacity, 1));
+  border-left-width: var(--tab-border, 1px);
+  border-bottom-width: 0;
+  border-right-width: var(--tab-border, 1px);
+  border-top-width: var(--tab-border, 1px);
+  border-left-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
+  border-right-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
+  border-top-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
+  padding-left: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
+  padding-right: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
+  padding-bottom: var(--tab-border, 1px);
+  padding-top: 0;
+}
+
+.tab-active-copy:before {
+  z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--tab-radius, 0.5rem);
+  height: var(--tab-radius, 0.5rem);
+  bottom: 0;
+  --tab-grad: calc(68% - var(--tab-border, 1px));
+  --tab-corner-bg: radial-gradient(
+    circle at var(--circle-pos),
+    transparent var(--tab-grad),
+    hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + 0.3px),
+    hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px)),
+    hsla(var(--b1) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
+  );
+  left: calc(var(--tab-radius, 0.5rem) * -1);
+  --circle-pos: top left;
+  background-image: var(--tab-corner-bg);
+}
+
+.tab-active-copy:after {
+  z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--tab-radius, 0.5rem);
+  height: var(--tab-radius, 0.5rem);
+  bottom: 0;
+  --tab-grad: calc(68% - var(--tab-border, 1px));
+  --tab-corner-bg: radial-gradient(
+    circle at var(--circle-pos),
+    transparent var(--tab-grad),
+    hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + 0.3px),
+    hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px)),
+    hsla(var(--b1) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
+  );
+  right: calc(var(--tab-radius, 0.5rem) * -1);
+  --circle-pos: top right;
+  background-image: var(--tab-corner-bg);
 }
