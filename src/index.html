@@ -4,184 +4,271 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>粵語輸入法 | 粵拼 Jyutping</title>
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="" />
+    <!--
+      <meta property="og:title" content="" />
+      <meta property="og:description" content="" />
+      <meta property="og:type" content="" />
+      <meta property="og:url" content="" />
+      <meta property="og:image" content="" />
+      <meta name="twitter:card" content="" />
+      <meta name="twitter:image" content="" />
+      <meta name="twitter:title" content="" />
+      <meta name="twitter:description" content="" />
+    -->
   </head>
   <body>
     <div id="container">
       <main>
         <section id="hero">
-          <div>
-            <img alt="粵語輸入法" src="assets/hero.png" />
+          <div id="background"></div>
+          <div id="foreground">
+            <img alt="粵語輸入法" src="./assets/hero.png" />
             <div>
               <h1>用你嘅母語——粵語打字。</h1>
-              <p>下載由香港語言學學會提供嘅 Rime 粵語拼音輸入法，<wbr />即裝即用！</p>
+              <p>下載由香港語言學學會提供嘅 Rime 粵語拼音<wbr />輸入法，<wbr />即裝即用！</p>
               <div class="btn-group">
                 <a id="btn-download-hero" class="btn-main border-0 border-r-2 border-blue-400"></a>
-                <a id="btn-more" class="btn-main tooltip tooltip-bottom tooltip-secondary" data-tip="其他版本">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M8 12.74L.01 4.75l1.27-1.27L8 10.19l6.72-6.71 1.27 1.27L8 12.74z" />
-                  </svg>
+                <a
+                  id="btn-more"
+                  href="#other"
+                  class="btn-main tooltip tooltip-bottom tooltip-secondary"
+                  data-tip="其他版本"
+                >
+                  <img alt="其他版本" src="./assets/chevron.svg" />
+                </a>
+              </div>
+              <div id="rime-outer">
+                <a id="btn-rime" href="#faq">我已經用緊 Rime</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div>
+          <section class="bg-green-50 text-base-content">
+            <div>
+              <h2 class="enter-lazy">點解要用粵拼打字？</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+              <!-- To be placed in header if any -->
+              <a id="btn-download-header" class="btn-main mt-12"></a>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section class="bg-yellow-400 text-neutral-content">
+            <div id="other">
+              <h2 class="enter-lazy">其他版本</h2>
+              <p class="text-2xl whitespace-nowrap enter-lazy animation-delay-400">
+                包含粵語拼音嘅<wbr /> Rime 輸入法套件安裝檔
+              </p>
+              <div id="platforms">
+                <a
+                  href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/windows-sfx-2021.05.16-installer.exe"
+                  class="animation-delay-50"
+                >
+                  <div>
+                    <img alt="Windows" src="./assets/windows.svg" />
+                    <h4>Windows</h4>
+                    <p>小狼毫 Weasel</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/mac-2021.05.16-installer.pkg"
+                  class="animation-delay-200"
+                >
+                  <div>
+                    <img alt="Mac" src="./assets/mac.svg" />
+                    <h4>Mac</h4>
+                    <p>鼠鬚管 Squirrel</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/ibus-install.sh"
+                  class="animation-delay-350"
+                >
+                  <div>
+                    <img alt="Linux" src="./assets/linux.svg" />
+                    <h4>Linux</h4>
+                    <p>IBus</p>
+                  </div>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.osfans.trime" class="animation-delay-500">
+                  <div>
+                    <img alt="Android" src="./assets/android.svg" />
+                    <h4>Android</h4>
+                    <p>同文 Trime</p>
+                  </div>
+                </a>
+                <a href="https://apps.apple.com/us/app/cantoboard/id1556817074" class="animation-delay-650">
+                  <div>
+                    <img alt="iOS" src="./assets/ios.svg" />
+                    <h4>iOS</h4>
+                    <p>Cantoboard</p>
+                  </div>
                 </a>
               </div>
             </div>
-          </div>
-        </section>
-        <section>
-          <div>
-            <h2>點解要用粵拼打字？</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
-            <a id="btn-download-header" class="btn-main mt-12"></a>
-          </div>
-        </section>
-        <section class="bg-accent text-accent-content">
-          <div>
-            <h2>其他版本</h2>
-            <p class="text-2xl">包含粵語拼音嘅 Rime 輸入法套件安裝檔</p>
-            <div id="platforms">
-              <a
-                href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/windows-sfx-2021.05.16-installer.exe"
-              >
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor">
-                    <path
-                      d="M1.589 23.55L1.572 8.24l18.839-2.558V23.55zM23.55 5.225l25.112-3.654V23.55H23.55zM48.669 26.69l-.006 21.979-25.112-3.533V26.69zM20.41 44.736l-18.824-2.58-.001-15.466H20.41z"
-                    />
-                  </svg>
-                  <h4>Windows</h4>
-                  <p>小狼毫 Weasel</p>
-                </div>
-              </a>
-              <a
-                href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/mac-2021.05.16-installer.pkg"
-              >
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 50" fill="currentColor">
-                    <path
-                      d="M39.054 34.065q-1.093 3.504-3.448 7.009-3.617 5.495-7.205 5.495-1.374 0-3.925-.897-2.411-.897-4.233-.897-1.71 0-3.981.925-2.271.953-3.701.953-4.261 0-8.439-7.261Q.001 32.075.001 25.29q0-6.392 3.168-10.485 3.14-4.037 7.962-4.037 2.019 0 4.962.841 2.916.841 3.869.841 1.262 0 4.009-.953 2.86-.953 4.85-.953 3.336 0 5.972 1.822 1.458 1.009 2.916 2.804-2.215 1.878-3.196 3.308-1.822 2.635-1.822 5.803 0 3.476 1.934 6.252t4.43 3.533zM28.512 1.179q0 1.71-.813 3.813-.841 2.103-2.607 3.869-1.514 1.514-3.028 2.019-1.037.308-2.916.477.084-4.177 2.187-7.205 2.075-3 7.009-4.149.028.084.07.308t.07.308q0 .112.014.28t.014.28z"
-                    />
-                  </svg>
-                  <h4>Mac</h4>
-                  <p>鼠鬚管 Squirrel</p>
-                </div>
-              </a>
-              <a href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/ibus-install.sh">
-                <div>
-                  <!--
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266 312" fill="currentColor">
-                    <g transform="translate(-3.3359375,285.2793)">
-                      <path
-                        d="M132-206c0,1-1,1-1,1h-1c-1,0-1-1-2-2,0,0-1-1-1-2s0-1,1-1l2,1c1,1,2,2,2,3m-18-10c0-5-2-8-5-8,0,0,0,1-1,1v2h3c0,2,1,3,1,5h2m35-5c2,0,3,2,4,5h2c-1-1-1-2-1-3s0-2-1-3-2-2-3-2c0,0-1,1-2,1,0,1,1,1,1,2m-30,16c-1,0-1,0-1-1s0-2,1-3c2,0,3-1,3-1,1,0,1,1,1,1,0,1-1,2-3,4h-1m-11-1c-4-2-5-5-5-10,0-3,0-5,2-7,1-2,3-3,5-3s3,1,5,3c1,3,2,6,2,9v1,1h1v-1c1,0,1-2,1-6,0-3,0-6-2-9s-4-5-8-5c-3,0-6,2-7,5-2,4-2.4,7-2.4,12,0,4,1.4,8,5.4,12,1-1,2-1,3-2m125,141c1,0,1-0.4,1-1.3,0-2.2-1-4.8-4-7.7-3-3-8-4.9-14-5.7-1-0.1-2-0.1-2-0.1-1-0.2-1-0.2-2-0.2-1-0.1-3-0.3-4-0.5,3-9.3,4-17.5,4-24.7,0-10-2-17-6-23s-8-9-13-10c-1,1-1,1-1,2,5,2,10,6,13,12,3,7,4,13,4,20,0,5.6-1,13.9-5,24.5-4,1.6-8,5.3-11,11.1,0,0.9,0,1.4,1,1.4,0,0,1-0.9,2-2.6,2-1.7,3-3.4,5-5.1,3-1.7,5-2.6,8-2.6,5,0,10,0.7,13,2.1,4,1.3,6,2.7,7,4.3,1,1.5,2,2.9,3,4.2,0,1.3,1,1.9,1,1.9m-92-145c-1-1-1-3-1-5,0-4,0-6,2-9,2-2,4-3,6-3,3,0,5,2,7,4,1,3,2,5,2,8,0,5-2,8-6,9,0,0,1,1,2,1,2,0,3,1,5,2,1-6,2-10,2-15,0-6-1-10-3-13-3-3-6-4-10-4-3,0-6,1-9,3-2,3-3,5-3,8,0,5,1,9,3,13,1,0,2,1,3,1m12,16c-13,9-23,13-31,13-7,0-14-3-20-8,1,2,2,4,3,5l6,6c4,4,9,6,14,6,7,0,15-4,25-11l9-6c2-2,4-4,4-7,0-1,0-2-1-2-1-2-6-5-16-8-9-4-16-6-20-6-3,0-8,2-15,6-6,4-10,8-10,12,0,0,1,1,2,3,6,5,12,8,18,8,8,0,18-4,31-14v2c1,0,1,1,1,1m23,202c4,7.52,11,11.3,19,11.3,2,0,4-0.3,6-0.9,2-0.4,4-1.1,5-1.9,1-0.7,2-1.4,3-2.2,2-0.7,2-1.2,3-1.7l17-14.7c4-3.19,8-5.98,13-8.4,4-2.4,8-4,10-4.9,3-0.8,5-2,7-3.6,1-1.5,2-3.4,2-5.8,0-2.9-2-5.1-4-6.7s-4-2.7-6-3.4-4-2.3-7-5c-2-2.6-4-6.2-5-10.9l-1-5.8c-1-2.7-1-4.7-2-5.8,0-0.3,0-0.4-1-0.4s-3,0.9-4,2.6c-2,1.7-4,3.6-6,5.6-1,2-4,3.8-6,5.5-3,1.7-6,2.6-8,2.6-8,0-12-2.2-15-6.5-2-3.2-3-6.9-4-11.1-2-1.7-3-2.6-5-2.6-5,0-7,5.2-7,15.7v3.3,11.6,8.9,4.3,3c0,0.9-1,2.9-1,6-1,3.1-1,6.62-1,10.6l-2,11.1v0.17m-145-5.29c9.3,1.36,20,4.27,32.1,8.71,12.1,4.4,19.5,6.7,22.2,6.7,7,0,12.8-3.1,17.6-9.09,1-1.94,1-4.22,1-6.84,0-9.45-5.7-21.4-17.1-35.9l-6.8-9.1c-1.4-1.9-3.1-4.8-5.3-8.7-2.1-3.9-4-6.9-5.5-9-1.3-2.3-3.4-4.6-6.1-6.9-2.6-2.3-5.6-3.8-8.9-4.6-4.2,0.8-7.1,2.2-8.5,4.1s-2.2,4-2.4,6.2c-0.3,2.1-0.9,3.5-1.9,4.2-1,0.6-2.7,1.1-5,1.6-0.5,0-1.4,0-2.7,0.1h-2.7c-5.3,0-8.9,0.6-10.8,1.6-2.5,2.9-3.8,6.2-3.8,9.7,0,1.6,0.4,4.3,1.2,8.1,0.8,3.7,1.2,6.7,1.2,8.8,0,4.1-1.2,8.2-3.7,12.3-2.5,4.3-3.8,7.5-3.8,9.78,1,3.88,7.6,6.61,19.7,8.21m33.3-90.9c0-6.9,1.8-14.5,5.5-23.5,3.6-9,7.2-15,10.7-19-0.2-1-0.7-1-1.5-1l-1-1c-2.9,3-6.4,10-10.6,20-4.2,9-6.4,17.3-6.4,23.4,0,4.5,1.1,8.4,3.1,11.8,2.2,3.3,7.5,8.1,15.9,14.2l10.6,6.9c11.3,9.8,17.3,16.6,17.3,20.6,0,2.1-1,4.2-4,6.5-2,2.4-4.7,3.6-7,3.6-0.2,0-0.3,0.2-0.3,0.7,0,0.1,1,2.1,3.1,6,4.2,5.7,13.2,8.5,25.2,8.5,22,0,39-9,52-27,0-5,0-8.1-1-9.4v-3.7c0-6.5,1-11.4,3-14.6s4-4.7,7-4.7c2,0,4,0.7,6,2.2,1-7.7,1-14.4,1-20.4,0-9.1,0-16.6-2-23.6-1-6-3-11-5-15-2-3-4-6-6-9s-3-6-5-9c-1-4-2-7-2-12-3-5-5-10-8-15-2-5-4-10-6-14l-9,7c-10,7-18,10-25,10-6,0-11-1-14-5l-6-5c0,3-1,7-3,11l-6.3,12c-2.8,7-4.3,11-4.6,14-0.4,2-0.7,4-0.9,4l-7.5,15c-8.1,15-12.2,28.9-12.2,40.4,0,2.3,0.2,4.7,0.6,7.1-4.5-3.1-6.7-7.4-6.7-13m71.6,94.6c-13,0-23,1.76-30,5.25v-0.3c-5,6-10.6,9.1-18.4,9.1-4.9,0-12.6-1.9-23-5.7-10.5-3.6-19.8-6.36-27.9-8.18-0.8-0.23-2.6-0.57-5.5-1.03-2.8-0.45-5.4-0.91-7.7-1.37-2.1-0.45-4.5-1.13-7.1-2.05-2.5-0.79-4.5-1.82-6-3.07-1.38-1.26-2.06-2.68-2.06-4.27,0-1.6,0.34-3.31,1.02-5.13,0.64-1.1,1.34-2.2,2.04-3.2,0.7-1.1,1.3-2.1,1.7-3.1,0.6-0.9,1-1.8,1.4-2.8,0.4-0.9,0.8-1.8,1-2.9,0.2-1,0.4-2,0.4-3s-0.4-4-1.2-9.3c-0.8-5.2-1.2-8.5-1.2-9.9,0-4.4,1-7.9,3.2-10.4s4.3-3.8,6.5-3.8h11.5c0.9,0,2.3-0.5,4.4-1.7,0.7-1.6,1.3-2.9,1.7-4.1,0.5-1.2,0.7-2.1,0.9-2.5,0.2-0.6,0.4-1.2,0.6-1.7,0.4-0.7,0.9-1.5,1.6-2.3-0.8-1-1.2-2.3-1.2-3.9,0-1.1,0-2.1,0.2-2.7,0-3.6,1.7-8.7,5.3-15.4l3.5-6.3c2.9-5.4,5.1-9.4,6.7-13.4,1.7-4,3.5-10,5.5-18,1.6-7,5.4-14,11.4-21l7.5-9c5.2-6,8.6-11,10.5-15s2.9-9,2.9-13c0-2-0.5-8-1.6-18-1-10-1.5-20-1.5-29,0-7,0.6-12,1.9-17s3.6-10,7-14c3-4,7-8,13-10s13-3,21-3c3,0,6,0,9,1,3,0,7,1,12,3,4,2,8,4,11,7,4,3,7,8,10,13,2,6,4,12,5,20,1,5,1,10,2,17,0,6,1,10,1,13,1,3,1,7,2,12,1,4,2,8,4,11,2,4,4,8,7,12,3,5,7,10,11,16,9,10,16,21,20,32,5,10,8,23,8,36.9,0,6.9-1,13.6-3,20.1,2,0,3,0.8,4,2.2s2,4.4,3,9.1l1,7.4c1,2.2,2,4.3,5,6.1,2,1.8,4,3.3,7,4.5,2,1,5,2.4,7,4.2,2,2,3,4.1,3,6.3,0,3.4-1,5.9-3,7.7-2,2-4,3.4-7,4.3-2,1-6,3-12,5.82-5,2.96-10,6.55-15,10.8l-10,8.51c-4,3.9-8,6.7-11,8.4-3,1.8-7,2.7-11,2.7l-7-0.8c-8-2.1-13-6.1-16-12.2-16-1.94-29-2.9-37-2.9"
-                      />
-                    </g>
-                  </svg>
-                  -->
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 110" fill="currentColor">
-                    <path
-                      d="M51.986 57.297c-1.797.025.34.926 2.686 1.287l1.76-1.516c-1.461.358-2.948.366-4.446.229m9.645-2.404c1.07-1.477 1.85-3.094 2.125-4.766-.24 1.192-.887 2.221-1.496 3.307-3.359 2.115-.316-1.256-.002-2.537-3.612 4.546-.496 2.726-.627 3.996m3.56-9.264c.217-3.236-.637-2.213-.924-.978.335.174.6 2.281.924.978M45.172 1.399c.959.172 2.072.304 1.916.533 1.049-.23 1.287-.442-1.916-.533M47.088 1.932l-.678.14.631-.056.047-.084M47.088 1.932l-.678.14.631-.056.047-.084M47.088 1.932l-.678.14.631-.056.047-.084M76.992 46.856c.107 2.906-.85 4.316-1.713 6.812l-1.553.776c-1.271 2.468.123 1.567-.787 3.53-1.984 1.764-6.021 5.52-7.313 5.863-.943-.021.639-1.113.846-1.541-2.656 1.824-2.131 2.738-6.193 3.846l-.119-.264c-10.018 4.713-23.934-4.627-23.751-17.371-.107.809-.304.607-.526.934-.517-6.557 3.028-13.143 9.007-15.832 5.848-2.895 12.704-1.707 16.893 2.197-2.301-3.014-6.881-6.209-12.309-5.91-5.317.084-10.291 3.463-11.951 7.131-2.724 1.715-3.04 6.611-4.227 7.507-1.597 11.737 3.004 16.808 10.787 22.773 1.225.826.345.951.511 1.58-2.586-1.211-4.954-3.039-6.901-5.277 1.033 1.512 2.148 2.982 3.589 4.137-2.438-.826-5.695-5.908-6.646-6.115 4.203 7.525 17.052 13.197 23.78 10.383-3.113.115-7.068.064-10.566-1.229-1.469-.756-3.467-2.322-3.11-2.615 9.182 3.43 18.667 2.598 26.612-3.771 2.021-1.574 4.229-4.252 4.867-4.289-.961 1.445.164.695-.574 1.971 2.014-3.248-.875-1.322 2.082-5.609l1.092 1.504c-.406-2.696 3.348-5.97 2.967-10.234.861-1.304.961 1.403.047 4.403 1.268-3.328.334-3.863.66-6.609.352.923.814 1.904 1.051 2.878-.826-3.216.848-5.416 1.262-7.285-.408-.181-1.275 1.422-1.473-2.377.029-1.65.459-.865.625-1.271-.324-.186-1.174-1.451-1.691-3.877.375-.57 1.002 1.478 1.512 1.562-.328-1.929-.893-3.4-.916-4.88-1.49-3.114-.527.415-1.736-1.337-1.586-4.947 1.316-1.148 1.512-3.396 2.404 3.483 3.775 8.881 4.404 11.117-.48-2.726-1.256-5.367-2.203-7.922.73.307-1.176-5.609.949-1.691-2.27-8.352-9.715-16.156-16.564-19.818.838.767 1.896 1.73 1.516 1.881-3.406-2.028-2.807-2.186-3.295-3.043-2.775-1.129-2.957.091-4.795.002-5.23-2.774-6.238-2.479-11.051-4.217l.219 1.023c-3.465-1.154-4.037.438-7.782.004-.228-.178 1.2-.644 2.375-.815-3.35.442-3.193-.66-6.471.122.808-.567 1.662-.942 2.524-1.424-2.732.166-6.522 1.59-5.352.295-4.456 1.988-12.37 4.779-16.811 8.943l-.14-.933c-2.035 2.443-8.874 7.296-9.419 10.46l-.544.127c-1.059 1.793-1.744 3.825-2.584 5.67-1.385 2.36-2.03.908-1.833 1.278-2.724 5.523-4.077 10.164-5.246 13.97.833 1.245.02 7.495.335 12.497-1.368 24.704 17.338 48.69 37.785 54.228 2.997 1.072 7.454 1.031 11.245 1.141-4.473-1.279-5.051-.678-9.408-2.197-3.143-1.48-3.832-3.17-6.058-5.102l.881 1.557c-4.366-1.545-2.539-1.912-6.091-3.037l.941-1.229c-1.415-.107-3.748-2.385-4.386-3.646l-1.548.061c-1.86-2.295-2.851-3.949-2.779-5.23l-.5.891c-.567-.973-6.843-8.607-3.587-6.83-.605-.553-1.409-.9-2.281-2.484l.663-.758c-1.567-2.016-2.884-4.6-2.784-5.461.836 1.129 1.416 1.34 1.99 1.533-3.957-9.818-4.179-.541-7.176-9.994l.634-.051c-.486-.732-.781-1.527-1.172-2.307l.276-2.75c-2.849-3.294-.797-14.006-.386-19.881.285-2.389 2.378-4.932 3.97-8.92l-.97-.167c1.854-3.234 10.586-12.988 14.63-12.486 1.959-2.461-.389-.009-.772-.629 4.303-4.453 5.656-3.146 8.56-3.947 3.132-1.859-2.688.725-1.203-.709 5.414-1.383 3.837-3.144 10.9-3.846.745.424-1.729.655-2.35 1.205 4.511-2.207 14.275-1.705 20.617 1.225 7.359 3.439 15.627 13.605 15.953 23.17l.371.1c-.188 3.802.582 8.199-.752 12.238l.908-1.912m-44.62 12.908l-.252 1.26c1.181 1.604 2.118 3.342 3.626 4.596l-3.374-5.856m2.792-.11c-.625-.691-.995-1.523-1.409-2.352.396 1.457 1.207 2.709 1.962 3.982l-.553-1.63m49.404-10.738l-.264.662a31.96 31.96 0 0 1-3.131 9.994 31.4 31.4 0 0 0 3.395-10.656M45.527.537C46.742.092 48.514.293 49.803 0L44.8.438l.727.099M2.872 23.219c.28 2.592-1.95 3.598.494 1.889 1.31-2.951-.512-.815-.494-1.889M0 35.215c.563-1.728.665-2.766.88-3.766-1.556 1.989-.716 2.413-.88 3.766"
-                    />
-                  </svg>
-                  <h4>Linux</h4>
-                  <p>IBus</p>
-                </div>
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.osfans.trime">
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="currentColor">
-                    <g transform="translate(0,-66.667)">
-                      <path
-                        d="m15.161 77.982c.544-1.762 1.288-3.27 2.204-4.534l92.974 93.102-92.483 93.392c-.611-.724-1.146-1.525-1.608-2.393-2.958-5.568-2.128-14.137-2.128-20.421V94.564c0-5.183-.476-11.665 1.041-16.581zm11.848-9.565c.176-.011 .354-.019 .532-.024 7.635-.216 11.624 3.209 17.88 6.896l98.805 57.04-26.584 26.845-90.633-90.758zm126.511 69.279l21.12 12.192c4.202 2.426 7.842 4.206 11.003 8.085 5.147 6.319 4.476 13.561-2.94 19.659-3.277 2.695-7.702 4.932-11.402 7.078l-17.833 10.34-28.491-28.529 28.544-28.824zm-9.343 62.741l-104.389 60.53c-3.445 1.998-5.119 2.837-9.255 3.298-.859 .096-1.686 .138-2.48 .13l89.619-90.499 26.505 26.541z"
-                      />
-                    </g>
-                  </svg>
-                  <h4>Android</h4>
-                  <p>同文 Trime</p>
-                </div>
-              </a>
-              <a href="https://apps.apple.com/us/app/cantoboard/id1556817074">
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <g transform="translate(-6,-6)">
-                      <path
-                        d="M9.938 24.031c-.344 .6-1.113 .8-1.706 .456-.6-.344-.8-1.113-.456-1.706l.894-1.544c1.006-.306 1.831-.069 2.475 .712zM18.619 20.663h-11.369c-.688 0-1.25-.563-1.25-1.25s.563-1.25 1.25-1.25h3.188l4.087-7.075-1.281-2.212c-.344-.6-.137-1.363 .456-1.706 .6-.344 1.363-.137 1.706 .456l.556 .962 .556-.962c.344-.6 1.113-.8 1.706-.456 .6 .344 .8 1.113 .456 1.706l-5.362 9.288h3.881c1.262 0 1.969 1.481 1.419 2.5zM24.75 20.663h-1.813l1.225 2.119c.344 .6 .137 1.363-.456 1.706-.6 .344-1.363 .137-1.706-.456-2.056-3.556-3.594-6.231-4.625-8.006-1.044-1.813-.3-3.625 .444-4.237 .819 1.419 2.044 3.544 3.681 6.375h3.25c.688 0 1.25 .563 1.25 1.25 0 .694-.563 1.25-1.25 1.25z"
-                      />
-                    </g>
-                  </svg>
-                  <h4>iOS</h4>
-                  <p>Cantoboard</p>
-                </div>
-              </a>
+          </section>
+        </div>
+        <div>
+          <section class="bg-blue-50 text-base-content">
+            <div id="faq" class="text-left">
+              <h2 class="enter-lazy">常見問題</h2>
+              <ol>
+                <li>
+                  <h3>下載完之後要做啲乜？</h3>
+                  <div class="tabbed select-platform">
+                    <input type="radio" name="faq1" id="faq1-windows" />
+                    <input type="radio" name="faq1" id="faq1-mac" />
+                    <input type="radio" name="faq1" id="faq1-linux" />
+                    <input type="radio" name="faq1" id="faq1-android" />
+                    <input type="radio" name="faq1" id="faq1-ios" />
+                    <div class="tabs">
+                      <label for="faq1-windows">Windows</label>
+                      <label for="faq1-mac">Mac</label>
+                      <label for="faq1-linux">Linux</label>
+                      <label for="faq1-android">Android</label>
+                      <label for="faq1-ios">iOS</label>
+                    </div>
+                    <div class="tab-content">
+                      <div>
+                        <!-- Windows -->
+                        <p>
+                          執行安裝檔，根據指示安裝。安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字
+                          <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。
+                        </p>
+                      </div>
+                      <div>
+                        <!-- Mac -->
+                        <p>
+                          執行安裝檔，根據指示安裝。安裝期間你可能會被 macOS
+                          話個檔案係來自未識別開發者，呢個時候請你去「系統偏好設定」撳
+                          <var>保安與私隱</var> 再撳檔案名稱隔離個 <var>強制開啓</var> 掣，然後撳 <var>開啓</var>。
+                        </p>
+                        <p>
+                          安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字
+                          <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。
+                        </p>
+                      </div>
+                      <div>
+                        <!-- Linux -->
+                        <p>執行安裝檔，根據指示安裝。</p>
+                      </div>
+                      <div>
+                        <!-- Android -->
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua.
+                        </p>
+                      </div>
+                      <div>
+                        <!-- iOS -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <h3>我本身已經用緊 Rime 啦噃，噉要點樣加粵語拼音落 Rime 度？</h3>
+                  <div class="tabbed select-platform">
+                    <input type="radio" name="faq2" id="faq2-windows" />
+                    <input type="radio" name="faq2" id="faq2-mac" />
+                    <input type="radio" name="faq2" id="faq2-linux" />
+                    <input type="radio" name="faq2" id="faq2-android" />
+                    <input type="radio" name="faq2" id="faq2-ios" />
+                    <div class="tabs">
+                      <label for="faq2-windows">Windows</label>
+                      <label for="faq2-mac">Mac</label>
+                      <label for="faq2-linux">Linux</label>
+                      <label for="faq2-android">Android</label>
+                      <label for="faq2-ios">iOS</label>
+                    </div>
+                    <div class="tab-content">
+                      <div>
+                        <!-- Windows -->
+                        <ol>
+                          <li>用 <kbd class="windows-key"></kbd> + <kbd>Space</kbd> 切換去小狼毫輸入法。</li>
+                          <li>喺個「中」字上面右擊，揀 <var>輸入法設定</var>。</li>
+                          <img alt="常見問題" src="./assets/faq2-windows1.png" />
+                          <li>撳 <var>獲取更多輸入方案…</var>。</li>
+                          <img alt="常見問題" src="./assets/faq2-windows2.png" />
+                          <li>
+                            然後喺彈出嚟個版面，輸入 <code>cantonese</code>，撳 <kbd>Enter</kbd>。跟住分別輸入
+                            <code>emoji</code> 同埋 <code>sgalal/rime-opencc-32bit-latest</code> 嚟安裝 Emoji
+                            套件同埋最新版嘅繁簡轉換套件。
+                          </li>
+                          <li>
+                            閂咗「Rime package installer」個視窗佢，去返「輸入法設定」個版面，勾選「粵語拼音」，然後撳
+                            <var>中</var>。
+                          </li>
+                          <li>跟住揀返自己中意嘅配色，再撳 <var>中</var> 嚟完成設定</li>
+                          <li>去返選單度撳 <var>重新部署</var>，等個程式處理詞庫資料。</li>
+                          <li>
+                            跟住撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字
+                            <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。
+                          </li>
+                        </ol>
+                      </div>
+                      <div>
+                        <!-- Mac -->
+                        <p>
+                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                          id est laborum.
+                        </p>
+                      </div>
+                      <div>
+                        <!-- Linux -->
+                        <p>
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                          pariatur.
+                        </p>
+                      </div>
+                      <div>
+                        <!-- Android -->
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua.
+                        </p>
+                      </div>
+                      <div>
+                        <!-- iOS -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <h3>詞庫似乎好舊下喎，要點更新個碼表？</h3>
+                  <p>同上面加粵語拼音落 Rime 嘅步驟一模一樣。</p>
+                </li>
+                <li>
+                  <h3>Lorem ipsum dolor sit amet?</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </li>
+              </ol>
             </div>
-          </div>
-        </section>
-        <section id="faq">
-          <div class="text-left">
-            <h2>常見問題</h2>
-            <h3>下載完之後要做啲乜？</h3>
-            <div class="tabbed">
-              <input type="radio" name="faq1" id="faq1-windows" />
-              <input type="radio" name="faq1" id="faq1-mac" />
-              <input type="radio" name="faq1" id="faq1-linux" />
-              <div class="tabs">
-                <label for="faq1-windows">Windows</label>
-                <label for="faq1-mac">Mac</label>
-                <label for="faq1-linux">Linux</label>
-              </div>
-              <div class="tab-content">
-                <div>
-                  <!-- Windows -->
-                  <p>
-                    執行安裝檔，根據指示安裝。安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字
-                    <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。
-                  </p>
-                </div>
-                <div>
-                  <!-- Mac -->
-                  <p>
-                    執行安裝檔，根據指示安裝。安裝期間你可能會被 macOS
-                    話個檔案係來自未識別開發者，呢個時候請你去「系統偏好設定」撳「保安與私隱」再撳檔案名稱隔離個「強制開啓」掣，然後撳「開啓」。
-                  </p>
-                  <p>
-                    安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字
-                    <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。
-                  </p>
-                </div>
-                <div>
-                  <!-- Linux -->
-                  <p>執行安裝檔，根據指示安裝。</p>
-                </div>
-              </div>
+          </section>
+        </div>
+        <div>
+          <section class="bg-red-400 text-neutral-content">
+            <div>
+              <h2 class="enter-lazy">仲諗？</h2>
+              <p class="enter-lazy animation-delay-350">試下先啦！唔試過又點會知呢？</p>
+              <a id="btn-download-final" class="btn-main mt-12"></a>
             </div>
-            <h3>我本身已經用緊 Rime 啦噃，噉要點樣加粵語拼音落 Rime 度？</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
-          </div>
-        </section>
-        <section class="bg-accent text-accent-content">
-          <div>
-            <h2>仲諗？</h2>
-            <p>試下先啦！唔試過又點會知呢？</p>
-            <a id="btn-download-final" class="btn-main mt-12"></a>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
     </div>
   </body>

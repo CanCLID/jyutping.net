@@ -1,6 +1,9 @@
 module.exports = {
   important: true,
-  purge: ["./src/**/*"],
+  purge: {
+    enabled: true,
+    content: ["./src/**/*"],
+  },
   theme: {
     fontFamily: {
       sans: [
@@ -16,10 +19,47 @@ module.exports = {
         "Segoe UI Emoji",
         "Segoe UI Symbol",
       ],
-      serif: ["SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+      serif: [
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Liberation Mono",
+        "Courier New",
+        "monospace",
+        "monospace",
+      ],
     },
   },
-  plugins: [require("daisyui")],
+  variants: {
+    extend: {
+      backgroundImage: ["hover"],
+    },
+  },
+  plugins: [
+    require("daisyui"),
+    require("tailwindcss/plugin")(({ addUtilities }) => {
+      addUtilities(
+        Object.assign(
+          Object.fromEntries(
+            Array.from({ length: 20 }, (n, i) => (i + 1) * 50).map(n => [
+              ".animation-delay-" + n,
+              { animationDelay: n + "ms" },
+            ])
+          ),
+          {
+            ".animation-none": { animationName: "none" },
+            ".animation-running": { animationPlayState: "running" },
+            ".animation-paused": { animationPlayState: "paused" },
+            ".animation-fill-none": { animationFillMode: "none" },
+            ".animation-fill-forwards": { animationFillMode: "forwards" },
+            ".animation-fill-backwards": { animationFillMode: "backwards" },
+            ".animation-fill-both": { animationFillMode: "both" },
+          }
+        )
+      );
+    }),
+  ],
   daisyui: {
     themes: [
       {
@@ -38,7 +78,7 @@ module.exports = {
           "neutral-content": "#ffffff",
           "base-100": "#ffffff",
           "base-200": "#f9fafb",
-          "base-300": "#d1d5db",
+          "base-300": "#e4e6e8",
           "base-content": "#1f2937",
           "info": "#2071f3",
           "success": "#009485",
