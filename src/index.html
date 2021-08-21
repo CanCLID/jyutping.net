@@ -25,7 +25,7 @@
             <img alt="粵語輸入法" src="./assets/hero.png" />
             <div>
               <h1>用你嘅母語——粵語打字。</h1>
-              <p>下載由香港語言學學會提供嘅 Rime 粵語拼音<wbr />輸入法，<wbr />即裝即用！</p>
+              <p>下載由香港語言學學會認證嘅粵語拼音<wbr />輸入法，<wbr />即裝即用！</p>
               <div class="btn-group">
                 <a id="btn-download-hero" class="btn-main border-0 border-r-2 border-blue-400"></a>
                 <a
@@ -47,13 +47,10 @@
           <section class="bg-green-50 text-base-content">
             <div>
               <h2 class="enter-lazy">點解要用粵拼打字？</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+              <p class="font-semibold">
+                每當你用粵拼打字，你嘅腦海入面就要出現一次粵語嘅標準發音然後輸出，通過呢個過程你就會不斷鍛鍊自己嘅粵語標準音。無論係母語者定係學習者，都可以通過拼音打字嚟練習自己嘅發音。
               </p>
+              <p class="font-semibold">普通話人用普通話拼音打字，粵語人就用粵語拼音打字。</p>
               <!-- To be placed in header if any -->
               <a id="btn-download-header" class="btn-main mt-12"></a>
             </div>
@@ -120,8 +117,8 @@
             <div id="faq" class="text-left">
               <h2 class="enter-lazy">常見問題</h2>
               <ol>
-                <li>
-                  <h3>下載完之後要做啲乜？</h3>
+                <li class="font-bold">
+                  <h3>下載完之後要點安裝？</h3>
                   <div class="tabbed select-platform">
                     <input type="radio" name="faq1" id="faq1-windows" />
                     <input type="radio" name="faq1" id="faq1-mac" />
@@ -173,7 +170,7 @@
                     </div>
                   </div>
                 </li>
-                <li>
+                <li class="font-bold">
                   <h3>我本身已經用緊 Rime 啦噃，噉要點樣加粵語拼音落 Rime 度？</h3>
                   <div class="tabbed select-platform">
                     <input type="radio" name="faq2" id="faq2-windows" />
@@ -198,7 +195,7 @@
                           <li>撳 <var>獲取更多輸入方案…</var>。</li>
                           <img alt="常見問題" src="./assets/faq2-windows2.png" />
                           <li>
-                            然後喺彈出嚟個版面，輸入 <code>cantonese</code>，撳 <kbd>Enter</kbd>。跟住分別輸入
+                            然後喺彈出嚟個命令行界面，輸入 <code>cantonese</code>，然後撳 <kbd>Enter</kbd>。跟住分別輸入
                             <code>emoji</code> 同埋 <code>sgalal/rime-opencc-32bit-latest</code> 嚟安裝 Emoji
                             套件同埋最新版嘅繁簡轉換套件。
                           </li>
@@ -237,24 +234,15 @@
                       </div>
                       <div>
                         <!-- iOS -->
+                        <h3>粵拼輸入法</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li class="font-bold">
                   <h3>詞庫似乎好舊下喎，要點更新個碼表？</h3>
                   <p>同上面加粵語拼音落 Rime 嘅步驟一模一樣。</p>
-                </li>
-                <li>
-                  <h3>Lorem ipsum dolor sit amet?</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
                 </li>
               </ol>
             </div>
@@ -270,6 +258,57 @@
           </section>
         </div>
       </main>
+      <footer class="bg-gray-800 pt-10">
+        <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
+          <div class="p-5 w-1/2">
+
+            <a href="https://github.com/rime/rime-cantonese" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+              rime-cantonese
+            </a>
+            <a href="https://jyutping.org/" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+              jyutping.org
+            </a>
+          </div>
+        </div>
+        <!-- Copyright Bar -->
+        <div class="pt-2">
+          <div
+            class="
+              flex
+              pb-5
+              px-3
+              m-auto
+              pt-5
+              border-t border-gray-500
+              text-gray-400 text-sm
+              flex-col
+              md:flex-row
+              max-w-6xl
+            "
+          >
+            <div class="mt-2">網站由粵語計算語言學基礎建設組建成，遵循 CC 4.0 授權協議發佈</div>
+
+            <!-- Required Unicons (if you want) -->
+            <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+              <a href="#" class="w-6 mx-1">
+                <i class="uil uil-facebook-f"></i>
+              </a>
+              <a href="#" class="w-6 mx-1">
+                <i class="uil uil-twitter-alt"></i>
+              </a>
+              <a href="#" class="w-6 mx-1">
+                <i class="uil uil-youtube"></i>
+              </a>
+              <a href="#" class="w-6 mx-1">
+                <i class="uil uil-linkedin"></i>
+              </a>
+              <a href="#" class="w-6 mx-1">
+                <i class="uil uil-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
