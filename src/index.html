@@ -101,6 +101,13 @@
                     <p>同文 Trime</p>
                   </div>
                 </a>
+                <a href="https://apps.apple.com/app/id1509367629" class="animation-delay-650">
+                  <div>
+                    <img alt="iOS" src="./assets/ios.svg" />
+                    <h4>iOS</h4>
+                    <p>粵拼輸入法</p>
+                  </div>
+                </a>
                 <a href="https://apps.apple.com/us/app/cantoboard/id1556817074" class="animation-delay-650">
                   <div>
                     <img alt="iOS" src="./assets/ios.svg" />
@@ -159,19 +166,18 @@
                       <div>
                         <!-- Android -->
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                          labore et dolore magna aliqua.
+                          直接運行 apk 檔，按照指示安裝。
                         </p>
                       </div>
                       <div>
                         <!-- iOS -->
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>安裝完粵拼輸入法或者 Cantoboard 之後，去系統設置 → 鍵盤度啓用粵拼鍵盤。</p>
                       </div>
                     </div>
                   </div>
                 </li>
                 <li class="font-bold">
-                  <h3>我本身已經用緊 Rime 啦噃，噉要點樣加粵語拼音落 Rime 度？</h3>
+                  <h3>我本身已經用緊 Rime 喇噃，噉要點樣加粵語拼音落 Rime 度？</h3>
                   <div class="tabbed select-platform">
                     <input type="radio" name="faq2" id="faq2-windows" />
                     <input type="radio" name="faq2" id="faq2-mac" />
@@ -213,36 +219,105 @@
                       </div>
                       <div>
                         <!-- Mac -->
-                        <p>
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                          id est laborum.
-                        </p>
+                        <ol>
+                          <li>
+                            打開你嘅終端運行下面呢句話
+                            <pre
+                              class="overflow-auto"
+                            ><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
+                          </li>
+                          <li>其中佢可能會彈出叫你安裝 git，要撳允許，冇 git 裝唔到 plum。運行完之後重新部署。</li>
+                          <li>跟住撳個 <kbd>Ctrl</kbd> 同 <kbd>`</kbd>，就可以見到「粵語拼音」嘞</li>
+                          <li>
+                            更多問題請參見
+                            <a
+                              class="text-blue-500"
+                              href="https://github.com/rime/rime-cantonese/wiki/macOS-%E9%80%B2%E9%9A%8E%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B"
+                              >macOS 進階安裝教程</a
+                            >
+                            或者去<a class="text-blue-500" href="https://t.me/rime_cantonese"> Telegram 羣組</a>諮詢。
+                          </li>
+                        </ol>
                       </div>
                       <div>
                         <!-- Linux -->
-                        <p>
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                          pariatur.
-                        </p>
+                        <ol>
+                          <li>
+                            如果你已經用緊 ibus，可以直接打開終端運行下面呢句話
+                            <pre
+                              class="overflow-auto"
+                            ><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
+                          </li>
+                          <li>跟住撳 <kbd>Ctrl</kbd> 同 <kbd>`</kbd>，就可以見到「粵語拼音」嘞</li>
+                          <li>
+                            更多問題請參見
+                            <a
+                              class="text-blue-500"
+                              href="https://github.com/rime/rime-cantonese/wiki/Ubuntu-Pop!_OS-%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B"
+                              >Ubuntu Pop!_OS 安裝教程</a
+                            >、
+                            <a
+                              class="text-blue-500"
+                              href="https://github.com/rime/rime-cantonese/wiki/Arch-Linux-%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B"
+                              >Arch Linux 安裝教程</a
+                            >
+                            或者去<a class="text-blue-500" href="https://t.me/rime_cantonese"> Telegram 羣組</a>諮詢。
+                          </li>
+                        </ol>
                       </div>
                       <div>
                         <!-- Android -->
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                          labore et dolore magna aliqua.
+                          詳情請去 <a class="text-blue-500" href="https://t.me/rime_cantonese"> Telegram 羣組</a>諮詢。
                         </p>
                       </div>
                       <div>
                         <!-- iOS -->
-                        <h3>粵拼輸入法</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>iRime 輸入法</h3>
+                        <p>
+                          去 iRime 輸入法嘅「語言列表」入面，揀「粵語拼音」就可以啓用粵拼。
+                        </p>
                       </div>
                     </div>
                   </div>
                 </li>
                 <li class="font-bold">
-                  <h3>詞庫似乎好舊下喎，要點更新個碼表？</h3>
+                  <h3>詞庫似乎好舊下，點更新個碼表？</h3>
                   <p>同上面加粵語拼音落 Rime 嘅步驟一模一樣。</p>
+                </li>
+                <li class="font-bold">
+                  <h3>我裝咗都仲係唔用得，點算？</h3>
+                  <p>
+                    無論遇到咩問題，都可以入我哋嘅<a class="text-blue-500" href="https://t.me/rime_cantonese">
+                      Telegram 羣組</a
+                    >揾大家幫手。
+                  </p>
+                </li>
+                <li class="font-bold">
+                  <h3>我唔識粵拼啊，點學？</h3>
+                  <p>
+                    粵拼好簡單，只要你識講粵語，就可以一個鐘以內學識。粵拼嘅方案總表同發音示範喺<a
+                      class="text-blue-500"
+                      href="https://jyutping.org/jyutping/"
+                      >呢度</a
+                    >。文字版嘅教程可以睇
+                    <a class="text-blue-500" href="https://jyutping.org/docs/cantonese/">識普拼，學粵拼</a
+                    >。如果你鍾意睇片學，可以睇
+                    <a class="text-blue-500" href="https://youtu.be/MOsf0BcLzlc">52 分鐘學識 LSHK 粵拼。</a>（<a
+                      href="https://www.bilibili.com/video/BV1yf4y1S7cW"
+                      >Bilibili 版</a
+                    >）
+                  </p>
+                  <p>
+                    啱開始用粵拼打字嗰陣可能會唔熟手，唔使擔心，打得越多就會越熟練。遇到唔識拼音嘅字可以去
+                    <a class="text-blue-500" href="https://jyut.net/">jyut.net</a>
+                    度查，呢個係最權威嘅在線粵音字典。電腦版嘅 Rime 粵拼可以撳 <kbd>`</kbd> 或者 <kbd>v</kbd> 或者
+                    <kbd>x</kbd> 嚟用普通話拼音、倉擷、筆畫反查。只要打多幾次，粵拼就會變成你最自然嘅打字方法。
+                  </p>
+                  <p>
+                    如果仲有其他問題，都可以去
+                    <a class="text-blue-500" href="https://t.me/rime_cantonese"> Telegram 羣組</a>入面揾大家解答。
+                  </p>
                 </li>
               </ol>
             </div>
@@ -260,13 +335,62 @@
       </main>
       <footer class="bg-gray-800 pt-10">
         <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
-          <div class="p-5 w-1/2">
+          <div class="p-5 w-1/4">
+            <div class="text-md uppercase text-gray-400 font-medium mb-6">參考</div>
 
-            <a href="https://github.com/rime/rime-cantonese" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+            <a
+              href="https://github.com/rime/rime-cantonese"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
               rime-cantonese
             </a>
-            <a href="https://jyutping.org/" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+            <a
+              href="https://jyutping.org/"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
               jyutping.org
+            </a>
+            <a
+              href="https://t.me/rime_cantonese"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
+              Telegram 用户交流組
+            </a>
+          </div>
+          <div class="p-5 w-1/4">
+            <div class="text-md uppercase text-gray-400 font-medium mb-6">實用工具</div>
+            <a
+              href="https://jyut.net/"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
+              粵音資料集叢
+            </a>
+            <a
+              href="https://words.hk/"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
+              粵典
+            </a>
+            <a
+              href="https://chrome.google.com/webstore/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
+              注入粵拼 Chrome 擴展
+            </a>
+          </div>
+          <div class="p-5 w-1/4">
+            <div class="text-md uppercase text-gray-400 font-medium mb-6">友情連結</div>
+            <a
+              href="https://hambaanglaang.hk/"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
+              冚唪唥粵文
+            </a>
+            <a
+              href="https://resonate.hk/"
+              class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+            >
+              迴響——粵語文學期刊
             </a>
           </div>
         </div>
@@ -286,7 +410,10 @@
               max-w-6xl
             "
           >
-            <div class="mt-2">網站由粵語計算語言學基礎建設組建成，遵循 CC 4.0 授權協議發佈</div>
+            <div class="mt-2">
+              本站由<a class="text-blue-500" href="https://github.com/CanCLID">粵語計算語言學基礎建設組</a>建成，遵循 CC
+              4.0 授權協議發佈
+            </div>
 
             <!-- Required Unicons (if you want) -->
             <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
