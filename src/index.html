@@ -17,10 +17,10 @@
     -->
   </head>
   <body>
-    <div id="container">
+    <div id="container" class="bg-purple-100">
       <main>
-        <section id="hero">
-          <div id="background"></div>
+        <section id="hero" class="h-1/2 bg-gradient-to-b from-blue-600 to-green-300">
+          <!-- <div id="background"></div> -->
           <div id="foreground">
             <img alt="粵語輸入法" src="./assets/hero.png" />
             <div>
@@ -32,9 +32,9 @@
                   id="btn-more"
                   href="#other"
                   class="btn-main tooltip tooltip-bottom tooltip-secondary"
-                  data-tip="其他版本"
+                  data-tip="其他平台"
                 >
-                  <img alt="其他版本" src="./assets/chevron.svg" />
+                  <img alt="其他平台" src="./assets/chevron.svg" />
                 </a>
               </div>
               <div id="rime-outer">
@@ -44,8 +44,8 @@
           </div>
         </section>
         <div>
-          <section class="bg-green-50 text-base-content">
-            <div>
+          <section class="bg-purple-100 text-base-content transform -skew-y-6 -translate-y-32">
+            <div class="transform skew-y-6">
               <h2 class="enter-lazy">點解要用粵拼打字？</h2>
               <p class="font-semibold">
                 每當你用粵拼打字，你嘅腦海入面就要出現一次粵語嘅標準發音然後輸出，通過呢個過程你就會不斷鍛鍊自己嘅粵語標準音。無論係母語者定係學習者，都可以通過拼音打字嚟練習自己嘅發音。
@@ -57,10 +57,10 @@
           </section>
         </div>
         <div>
-          <section class="bg-yellow-400 text-neutral-content">
-            <div id="other">
-              <h2 class="enter-lazy">其他版本</h2>
-              <p class="text-2xl whitespace-nowrap enter-lazy animation-delay-400">
+          <section class="bg-red-400 text-neutral-content transform skew-y-3 -translate-y-32">
+            <div id="other" class="transform -skew-y-3">
+              <h2 class="enter-lazy text-gray-100">全平台支援</h2>
+              <p class="text-2xl font-bold text-gray-100 whitespace-nowrap enter-lazy animation-delay-400">
                 包含粵語拼音嘅<wbr /> Rime 輸入法套件安裝檔
               </p>
               <div id="platforms">
@@ -120,7 +120,7 @@
           </section>
         </div>
         <div>
-          <section class="bg-blue-50 text-base-content">
+          <section class="bg-yellow-50 text-base-content transform -translate-y-48">
             <div id="faq" class="text-left">
               <h2 class="enter-lazy">常見問題</h2>
               <ol>
@@ -165,9 +165,7 @@
                       </div>
                       <div>
                         <!-- Android -->
-                        <p>
-                          直接運行 apk 檔，按照指示安裝。
-                        </p>
+                        <p>直接運行 apk 檔，按照指示安裝。</p>
                       </div>
                       <div>
                         <!-- iOS -->
@@ -274,9 +272,7 @@
                       <div>
                         <!-- iOS -->
                         <h3>iRime 輸入法</h3>
-                        <p>
-                          去 iRime 輸入法嘅「語言列表」入面，揀「粵語拼音」就可以啓用粵拼。
-                        </p>
+                        <p>去 iRime 輸入法嘅「語言列表」入面，揀「粵語拼音」就可以啓用粵拼。</p>
                       </div>
                     </div>
                   </div>
@@ -324,7 +320,7 @@
           </section>
         </div>
         <div>
-          <section class="bg-red-400 text-neutral-content">
+          <section class="bg-green-500 text-neutral-content transform -translate-y-48">
             <div>
               <h2 class="enter-lazy">仲諗？</h2>
               <p class="enter-lazy animation-delay-350">試下先啦！唔試過又點會知呢？</p>
@@ -333,7 +329,7 @@
           </section>
         </div>
       </main>
-      <footer class="bg-gray-800 pt-10">
+      <footer class="bg-gray-800 py-8 transform -translate-y-48 -mb-48">
         <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
           <div class="p-5 w-1/4">
             <div class="text-md uppercase text-gray-400 font-medium mb-6">參考</div>
