@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'I.Ming';
+  src: local('I.Ming') url(./assets/I.Ming-7.01.ttf) format('ttf');
+}
+
 @layer base {
   html {
     font-size: 14px;

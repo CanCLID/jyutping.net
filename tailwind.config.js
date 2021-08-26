@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
+        "I.Ming",
         "Open Sans",
         "-apple-system",
         "BlinkMacSystemFont",
@@ -20,6 +21,7 @@ module.exports = {
         "Segoe UI Symbol",
       ],
       serif: [
+        "I.Ming",
         "SFMono-Regular",
         "Menlo",
         "Monaco",
