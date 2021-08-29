@@ -21,7 +21,7 @@ const inner = display.firstElementChild;
 const logo = inner.firstElementChild;
 const name = inner.children[1].textContent;
 
-["btn-download-header", "btn-download-hero", "btn-download-final"].forEach(id => {
+["btn-download-hero", "btn-download-final"].forEach(id => {
   const element = document.getElementById(id) as HTMLAnchorElement;
   element.appendChild(logo.cloneNode(true));
   element.appendChild(document.createTextNode(`下載 ${name} 版`));

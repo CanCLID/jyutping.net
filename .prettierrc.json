@@ -1,5 +1,5 @@
 {
-    "arrowParens": "avoid",
-    "printWidth": 120,
-    "quoteProps": "consistent"
+  "arrowParens": "avoid",
+  "printWidth": 200,
+  "quoteProps": "consistent"
 }

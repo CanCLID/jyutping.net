@@ -6,59 +6,23 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: [
-        "I.Ming",
-        "Open Sans",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Segoe UI",
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        "sans-serif",
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-      ],
-      serif: [
-        "I.Ming",
-        "SFMono-Regular",
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        "Liberation Mono",
-        "Courier New",
-        "monospace",
-        "monospace",
-      ],
-    },
-  },
-  variants: {
-    extend: {
-      backgroundImage: ["hover"],
+      sans: ["'I.Ming'", "Open Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
+      serif: ["'I.Ming'", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace", "monospace"],
     },
   },
   plugins: [
     require("daisyui"),
     require("tailwindcss/plugin")(({ addUtilities }) => {
       addUtilities(
-        Object.assign(
-          Object.fromEntries(
-            Array.from({ length: 20 }, (n, i) => (i + 1) * 50).map(n => [
-              ".animation-delay-" + n,
-              { animationDelay: n + "ms" },
-            ])
-          ),
-          {
-            ".animation-none": { animationName: "none" },
-            ".animation-running": { animationPlayState: "running" },
-            ".animation-paused": { animationPlayState: "paused" },
-            ".animation-fill-none": { animationFillMode: "none" },
-            ".animation-fill-forwards": { animationFillMode: "forwards" },
-            ".animation-fill-backwards": { animationFillMode: "backwards" },
-            ".animation-fill-both": { animationFillMode: "both" },
-          }
-        )
+        Object.assign(Object.fromEntries(Array.from({ length: 20 }, (n, i) => (i + 1) * 50).map(n => [".animation-delay-" + n, { animationDelay: n + "ms" }])), {
+          ".animation-none": { animationName: "none" },
+          ".animation-running": { animationPlayState: "running" },
+          ".animation-paused": { animationPlayState: "paused" },
+          ".animation-fill-none": { animationFillMode: "none" },
+          ".animation-fill-forwards": { animationFillMode: "forwards" },
+          ".animation-fill-backwards": { animationFillMode: "backwards" },
+          ".animation-fill-both": { animationFillMode: "both" },
+        })
       );
     }),
   ],

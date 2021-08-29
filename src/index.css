@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'I.Ming';
-  src: local('I.Ming') url(./assets/I.Ming-7.01.ttf) format('ttf');
+  font-family: "I.Ming";
+  src: local("I.Ming") url("./assets/I.Ming-7.01.ttf") format("ttf");
+  font-display: swap;
 }
 
 @layer base {
@@ -23,12 +24,20 @@
     @apply kbd kbd-sm align-text-bottom;
   }
 
+  pre {
+    @apply overflow-auto select-all;
+  }
+
   code {
     @apply px-1 py-0.5 text-base text-gray-800 bg-gray-100 align-text-bottom rounded;
   }
 
   var {
     @apply badge badge-outline badge-lg text-gray-600 not-italic font-normal align-text-bottom;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-focus;
   }
 
   ul {
@@ -96,7 +105,7 @@
 }
 
 .btn-main {
-  @apply btn btn-md md:btn-lg btn-primary text-lg sm:text-base md:text-lg shadow-md;
+  @apply btn btn-md md:btn-lg btn-primary text-lg sm:text-base md:text-lg hover:text-neutral-content shadow-md;
   img {
     @apply w-5 md:w-7 mr-2 md:mr-3;
   }
@@ -124,12 +133,12 @@
 }
 
 #hero {
-  @apply hero min-h-screen relative text-neutral-content;
+  @apply hero relative text-neutral-content pb-24 -mb-72;
   #background {
-    @apply absolute -inset-4 animation-fade-in;
+    @apply absolute -inset-x-4 -inset-y-1/4 animation-fade-in from-blue-500 to-green-300;
     z-index: -1;
-    transform: translateZ(-0.8rem) scale(1.8);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./assets/background.png");
+    transform: translateZ(-1.8rem) scale(2.8);
+    background-image: linear-gradient(190deg, var(--tw-gradient-stops));
   }
   #foreground {
     @apply flex-col hero-content px-8 py-16 w-full max-w-6xl lg:flex-row-reverse;
@@ -159,12 +168,16 @@
       }
     }
     #rime-outer {
-      @apply animation-enter animation-delay-900;
+      @apply animation-enter animation-delay-900 mt-4 md:mt-6 md:text-lg font-semibold;
       #btn-rime {
-        @apply btn glass btn-sm mt-4 md:mt-6 bg-none hover:bg-none bg-white hover:bg-white bg-opacity-10 hover:bg-opacity-20 md:text-lg md:px-5 md:h-10;
+        @apply duration-200;
       }
     }
   }
+}
+
+#secondary {
+  background-image: linear-gradient(3deg, #f87171 15%, transparent calc(15% + 1px)), linear-gradient(-6deg, #f2f0ff 75%, transparent calc(75% + 1px));
 }
 
 section:not(#hero) {
@@ -175,10 +188,10 @@ section:not(#hero) {
       @apply text-4xl lg:text-5xl font-semibold;
     }
     h3 {
-      @apply mt-8 text-2xl font-normal;
+      @apply mt-8 text-2xl font-semibold text-gray-700;
     }
     p {
-      @apply mt-8 text-xl font-light;
+      @apply mt-8 text-xl leading-relaxed;
     }
   }
 }
@@ -209,13 +222,16 @@ section:not(#hero) {
 #faq {
   > ul,
   > ol {
-    @apply mt-8 ml-8 text-2xl font-light;
+    @apply mt-8 ml-8 text-2xl;
     > li {
       @apply mt-0;
     }
     ul,
     ol {
-      @apply mt-8 text-xl font-light;
+      @apply mt-8 text-xl;
+      > li {
+        @apply leading-relaxed;
+      }
     }
   }
 }
@@ -268,6 +284,31 @@ section:not(#hero) {
   @apply block;
 }
 
+footer {
+  @apply bg-neutral text-neutral-content pt-8 pb-2;
+  > div {
+    @apply max-w-6xl mx-auto px-8 md:px-12;
+  }
+  #columns {
+    @apply flex;
+    > div {
+      @apply p-5 flex-1;
+      div {
+        @apply mb-6 text-base text-gray-400 font-medium;
+      }
+      a {
+        @apply block my-3 text-sm text-gray-300 hover:text-gray-400;
+      }
+    }
+  }
+  #copyright {
+    @apply border-t border-gray-500;
+    > div {
+      @apply px-3 py-7 flex text-gray-400 text-sm;
+    }
+  }
+}
+
 /*
  * tab-active-copy
  * copied tab-active class from daisyui
@@ -301,8 +342,7 @@ section:not(#hero) {
         circle at var(--circle-pos),
         transparent var(--tab-grad),
         hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + 0.3px),
-        hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1))
-          calc(var(--tab-grad) + var(--tab-border, 1px)),
+        hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px)),
         hsla(var(--b1) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
       );
       background-image: var(--tab-corner-bg);
