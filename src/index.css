@@ -8,6 +8,22 @@
   font-display: swap;
 }
 
+body {
+  overflow: overlay;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(109, 40, 217);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
 @layer base {
   html {
     font-size: 14px;
