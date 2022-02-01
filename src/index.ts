@@ -9,8 +9,13 @@ addEventListener("resize", resize);
 addEventListener("load", resize);
 
 // Set download buttons
-const mapping = { [-1]: 3, 0: 0, 1: 1, 2: 2, 3: 4 };
-const target = mapping[[/Win/i, /Mac/i, /Linux/i, /iPhone|iPad|iPod/i].findIndex(r => r.test(navigator.platform))];
+// 0: Windows
+// 1: iOS
+// 2: Android
+// 3: Linux
+// 4: Mac
+const mapping = { [-1]: 0, 0: 0, 1: 4, 2: 3, 3: 2, 4: 1 };
+const target = mapping[[/Win/i, /iPhone|iPad|iPod/i, /Android/i, /Linux/i, /Mac/i].findIndex(r => r.test(navigator.userAgent))];
 
 const platforms = document.getElementById("platforms");
 const display = platforms.children[target] as HTMLAnchorElement;
