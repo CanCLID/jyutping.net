@@ -213,7 +213,7 @@ section:not(#hero) {
 }
 
 #platforms {
-  @apply flex flex-wrap justify-center mt-16 gap-4;
+  @apply flex flex-wrap justify-center mt-16 gap-8;
   a {
     flex: 0 0 14.4rem;
     @screen lg {
