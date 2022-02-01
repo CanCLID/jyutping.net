@@ -24,7 +24,11 @@ const name = inner.children[1].textContent;
 ["btn-download-hero", "btn-download-final"].forEach(id => {
   const element = document.getElementById(id) as HTMLAnchorElement;
   element.appendChild(logo.cloneNode(true));
-  element.appendChild(document.createTextNode(`下載 ${name} 版`));
+  if (target !== 2) {
+    element.appendChild(document.createTextNode(`下載 ${name} 版`));
+  } else {
+    element.appendChild(document.createTextNode("睇下 Linux 下點搞"));
+  }
   element.href = link;
 });
 
