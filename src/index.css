@@ -10,23 +10,24 @@
 
 body {
   overflow: overlay;
-  margin: 0;
-  padding: 0;
+  @apply m-0 p-0;
 }
+
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  @apply w-2 h-2;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: rgba(109, 40, 217);
-  border-radius: 10px;
+  @apply bg-purple-500 rounded-full;
 }
+
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
+  @apply bg-transparent;
 }
 
 @layer base {
   html {
-    font-size: 14px;
+    font-size: 12px;
     @screen sm {
       font-size: 16px;
     }
@@ -53,7 +54,7 @@ body {
   }
 
   a {
-    @apply text-primary hover:text-primary-focus;
+    @apply text-primary hover:text-primary-focus transition-colors whitespace-nowrap;
   }
 
   ul {
@@ -144,8 +145,7 @@ body {
 }
 
 #container {
-  @apply absolute inset-0 overflow-x-hidden overflow-y-scroll;
-  perspective: 1rem;
+  @apply overflow-x-hidden;
 }
 
 #hero {
@@ -260,7 +260,7 @@ section:not(#hero) {
   .tabs {
     @apply mx-6 font-normal;
     > label {
-      @apply tab tab-lg tab-lifted;
+      @apply tab tab-lg tab-lifted transition-colors;
     }
   }
   .tab-content {
