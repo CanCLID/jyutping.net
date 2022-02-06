@@ -26,306 +26,320 @@
 
       gtag("config", "G-E8N1DMVXRF");
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="container">
-      <main>
-        <section id="hero">
-          <div id="background"></div>
-          <div id="foreground">
-            <img alt="粵語拼音輸入法" src="./assets/demo.gif" />
-            <div>
-              <h1>粵拼打字 真係好易</h1>
-              <p>即裝即用粵語拼音輸入法，我手寫我口！</p>
-              <div class="btn-group">
-                <a id="btn-download-hero" class="btn-main border-0 border-r-2 border-blue-400"></a>
-                <a id="btn-more" href="#other" class="btn-main tooltip tooltip-bottom tooltip-secondary" data-tip="其他平台">
-                  <img alt="其他平台" src="./assets/chevron.svg" />
+      <div id="background">
+        <img alt="粵語拼音輸入法" src="./assets/background.png" />
+      </div>
+      <div id="content">
+        <main>
+          <section id="hero">
+            <div id="foreground">
+              <div id="box">
+                <img alt="粵語拼音輸入法" src="./assets/demo.gif" />
+                <div>
+                  <h1>粵拼打字 真係好易</h1>
+                  <p>即裝即用粵語拼音輸入法，我手寫我口！</p>
+                  <div class="btn-group">
+                    <a id="btn-download-hero" class="btn-main border-0 border-r-2 border-blue-400"></a>
+                    <a id="btn-more" href="#other" class="btn-main tooltip tooltip-bottom tooltip-primary" data-tip="其他平台">
+                      <img alt="其他平台" src="./assets/chevron.svg" />
+                    </a>
+                  </div>
+                  <div id="rime-outer">
+                    <a id="btn-rime" href="#faq">我已經用緊 Rime</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="secondary" class="text-base-content pt-96 md:pt-80 pb-72">
+            <div class="max-w-4xl py-12">
+              <h2 class="enter-lazy my-12">點解要用粵拼打字？</h2>
+              <p class="text-xl md:text-2xl leading-8 md:leading-10 mt-10">
+                每當你用粵拼打字，你嘅腦海入面就要出現一次粵語嘅標準發音然後輸出，通過呢個過程你就會不斷鍛鍊自己嘅粵語標準音。無論係母語者定係學習者，都可以通過拼音打字嚟練習自己嘅發音。
+              </p>
+              <p class="text-xl md:text-2xl leading-8 md:leading-10">我手寫我口，普通話人用普通話拼音打字，粵語人就用粵語拼音打字。</p>
+            </div>
+          </section>
+          <section class="bg-red-400 text-neutral-content pt-0 pb-24">
+            <div id="other">
+              <h2 class="enter-lazy">全平台支援</h2>
+              <p class="text-2xl whitespace-nowrap enter-lazy animation-delay-400">包含粵語拼音嘅<wbr /> Rime 輸入法套件安裝檔</p>
+              <div id="platforms">
+                <a href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/windows-sfx-2021.05.16-installer.exe" class="animation-delay-50">
+                  <div>
+                    <img alt="Windows" src="./assets/windows.svg" />
+                    <h4>Windows</h4>
+                    <p>小狼毫 Weasel</p>
+                  </div>
+                </a>
+                <a href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/mac-2021.05.16-installer.pkg" class="animation-delay-200">
+                  <div>
+                    <img alt="Mac" src="./assets/mac.svg" />
+                    <h4>Mac</h4>
+                    <p>鼠鬚管 Squirrel</p>
+                  </div>
+                </a>
+                <a href="https://github.com/rime/rime-cantonese/wiki" class="animation-delay-350">
+                  <div>
+                    <img alt="Linux" src="./assets/linux.svg" />
+                    <h4>Linux</h4>
+                    <p>IBus</p>
+                  </div>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.osfans.trime" class="animation-delay-500">
+                  <div>
+                    <img alt="Android" src="./assets/android.svg" />
+                    <h4>Android</h4>
+                    <p>同文 Trime</p>
+                  </div>
+                </a>
+                <a href="https://apps.apple.com/us/app/cantoboard/id1556817074" class="animation-delay-650">
+                  <div>
+                    <img alt="iOS" src="./assets/ios.svg" />
+                    <h4>iOS</h4>
+                    <p>Cantoboard</p>
+                  </div>
+                </a>
+                <a href="https://apps.apple.com/app/id1509367629" class="animation-delay-800">
+                  <div>
+                    <img alt="iOS" src="./assets/ios.svg" />
+                    <h4>iOS</h4>
+                    <p>粵拼輸入法</p>
+                  </div>
                 </a>
               </div>
-              <div id="rime-outer">
-                <a id="btn-rime" href="#faq">我已經用緊 Rime</a>
-              </div>
             </div>
-          </div>
-        </section>
-        <section id="secondary" class="text-base-content pt-96 md:pt-80 pb-72">
-          <div class="max-w-4xl py-12">
-            <h2 class="enter-lazy my-12">點解要用粵拼打字？</h2>
-            <p class="text-xl md:text-2xl leading-8 md:leading-10 mt-10">
-              每當你用粵拼打字，你嘅腦海入面就要出現一次粵語嘅標準發音然後輸出，通過呢個過程你就會不斷鍛鍊自己嘅粵語標準音。無論係母語者定係學習者，都可以通過拼音打字嚟練習自己嘅發音。
-            </p>
-            <p class="text-xl md:text-2xl leading-8 md:leading-10">我手寫我口，普通話人用普通話拼音打字，粵語人就用粵語拼音打字。</p>
-          </div>
-        </section>
-        <section class="bg-red-400 text-neutral-content pt-0 pb-24">
-          <div id="other">
-            <h2 class="enter-lazy">全平台支援</h2>
-            <p class="text-2xl whitespace-nowrap enter-lazy animation-delay-400">包含粵語拼音嘅<wbr /> Rime 輸入法套件安裝檔</p>
-            <div id="platforms">
-              <a href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/windows-sfx-2021.05.16-installer.exe" class="animation-delay-50">
-                <div>
-                  <img alt="Windows" src="./assets/windows.svg" />
-                  <h4>Windows</h4>
-                  <p>小狼毫 Weasel</p>
-                </div>
-              </a>
-              <a href="https://github.com/rime/rime-cantonese/releases/download/2021.05.16/mac-2021.05.16-installer.pkg" class="animation-delay-200">
-                <div>
-                  <img alt="Mac" src="./assets/mac.svg" />
-                  <h4>Mac</h4>
-                  <p>鼠鬚管 Squirrel</p>
-                </div>
-              </a>
-              <a href="https://github.com/rime/rime-cantonese/wiki" class="animation-delay-350">
-                <div>
-                  <img alt="Linux" src="./assets/linux.svg" />
-                  <h4>Linux</h4>
-                  <p>IBus</p>
-                </div>
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.osfans.trime" class="animation-delay-500">
-                <div>
-                  <img alt="Android" src="./assets/android.svg" />
-                  <h4>Android</h4>
-                  <p>同文 Trime</p>
-                </div>
-              </a>
-              <a href="https://apps.apple.com/us/app/cantoboard/id1556817074" class="animation-delay-650">
-                <div>
-                  <img alt="iOS" src="./assets/ios.svg" />
-                  <h4>iOS</h4>
-                  <p>Cantoboard</p>
-                </div>
-              </a>
-              <a href="https://apps.apple.com/app/id1509367629" class="animation-delay-800">
-                <div>
-                  <img alt="iOS" src="./assets/ios.svg" />
-                  <h4>iOS</h4>
-                  <p>粵拼輸入法</p>
-                </div>
-              </a>
+          </section>
+          <section id="learn-jyutping" class="text-base-content pt-24 pb-24">
+            <div class="max-w-4xl pb-6">
+              <h2 class="enter-lazy">我唔識粵拼噃，點學？</h2>
+              <p class="text-x md:text-2xl leading-8 md:leading-10 mt-10">粵拼好簡單，只要你識講粵語，就可以一個鐘以內學識。</p>
+              <p class="text-xl md:text-2xl leading-8 md:leading-10">
+                粵拼嘅方案總表同發音示範喺 <a href="https://jyutping.org/jyutping/">LSHK 粵拼方案</a>。文字版嘅教程可以睇<a href="https://jyutping.org/docs/cantonese/">識普拼，學粵拼</a
+                >。如果你鍾意睇片學，可以睇 <a href="https://youtu.be/MOsf0BcLzlc">52 分鐘學識 LSHK 粵拼</a>。
+              </p>
             </div>
-          </div>
-        </section>
-        <section class="bg-blue-800 text-neutral-content pt-24 pb-24">
-          <div class="max-w-4xl pb-6">
-            <h2 class="enter-lazy">我唔識粵拼噃，點學？</h2>
-            <p class="text-x md:text-2xl leading-8 md:leading-10 mt-10">粵拼好簡單，只要你識講粵語，就可以一個鐘以內學識。</p>
-            <p class="text-xl md:text-2xl leading-8 md:leading-10">
-              粵拼嘅方案總表同發音示範喺 <a href="https://jyutping.org/jyutping/">LSHK 粵拼方案</a>。文字版嘅教程可以睇<a href="https://jyutping.org/docs/cantonese/">識普拼，學粵拼</a
-              >。如果你鍾意睇片學，可以睇 <a href="https://youtu.be/MOsf0BcLzlc">52 分鐘學識 LSHK 粵拼</a>。
-            </p>
-          </div>
-        </section>
-        <section class="bg-yellow-50 text-base-content">
-          <div id="faq" class="text-left">
-            <h2 class="enter-lazy">常見問題</h2>
-            <ol>
-              <li>
-                <h3>下載完之後要點安裝？</h3>
-                <div class="tabbed select-platform">
-                  <input type="radio" name="faq1" id="faq1-windows" />
-                  <input type="radio" name="faq1" id="faq1-mac" />
-                  <input type="radio" name="faq1" id="faq1-linux" />
-                  <input type="radio" name="faq1" id="faq1-android" />
-                  <input type="radio" name="faq1" id="faq1-ios" />
-                  <div class="tabs">
-                    <label for="faq1-windows">Windows</label>
-                    <label for="faq1-mac">Mac</label>
-                    <label for="faq1-linux">Linux</label>
-                    <label for="faq1-android">Android</label>
-                    <label for="faq1-ios">iOS</label>
-                  </div>
-                  <div class="tab-content">
-                    <div>
-                      <!-- Windows -->
-                      <p>執行安裝檔，根據指示安裝。安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</p>
+          </section>
+          <section class="bg-yellow-50 text-base-content">
+            <div id="faq" class="text-left">
+              <h2 class="enter-lazy">常見問題</h2>
+              <ol>
+                <li>
+                  <h3>下載完之後要點安裝？</h3>
+                  <div class="tabbed select-platform">
+                    <input type="radio" name="faq1" id="faq1-windows" />
+                    <input type="radio" name="faq1" id="faq1-mac" />
+                    <input type="radio" name="faq1" id="faq1-linux" />
+                    <input type="radio" name="faq1" id="faq1-android" />
+                    <input type="radio" name="faq1" id="faq1-ios" />
+                    <div class="tabs">
+                      <label for="faq1-windows">Windows</label>
+                      <label for="faq1-mac">Mac</label>
+                      <label for="faq1-linux">Linux</label>
+                      <label for="faq1-android">Android</label>
+                      <label for="faq1-ios">iOS</label>
                     </div>
-                    <div>
-                      <!-- Mac -->
-                      <p>
-                        執行安裝檔，根據指示安裝。安裝期間你可能會被 macOS 話個檔案係來自未識別開發者，呢個時候請你去「系統偏好設定」撳
-                        <var>保安與私隱</var> 再撳檔案名稱隔離個 <var>強制開啓</var> 掣，然後撳 <var>開啓</var>。
-                      </p>
-                      <p>安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</p>
-                    </div>
-                    <div>
-                      <!-- Linux -->
-                      <p>執行安裝檔，根據指示安裝。</p>
-                    </div>
-                    <div>
-                      <!-- Android -->
-                      <p>直接運行 apk 檔，按照指示安裝。</p>
-                    </div>
-                    <div>
-                      <!-- iOS -->
-                      <p>安裝完粵拼輸入法或者 Cantoboard 之後，去系統設置 → 鍵盤度啓用粵拼鍵盤。</p>
+                    <div class="tab-content">
+                      <div>
+                        <!-- Windows -->
+                        <p>執行安裝檔，根據指示安裝。安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</p>
+                      </div>
+                      <div>
+                        <!-- Mac -->
+                        <p>
+                          執行安裝檔，根據指示安裝。安裝期間你可能會被 macOS 話個檔案係來自未識別開發者，呢個時候請你去「系統偏好設定」撳
+                          <var>保安與私隱</var> 再撳檔案名稱隔離個 <var>強制開啓</var> 掣，然後撳 <var>開啓</var>。
+                        </p>
+                        <p>安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</p>
+                      </div>
+                      <div>
+                        <!-- Linux -->
+                        <p>執行安裝檔，根據指示安裝。</p>
+                      </div>
+                      <div>
+                        <!-- Android -->
+                        <p>直接運行 apk 檔，按照指示安裝。</p>
+                      </div>
+                      <div>
+                        <!-- iOS -->
+                        <p>安裝完粵拼輸入法或者 Cantoboard 之後，去系統設置 → 鍵盤度啓用粵拼鍵盤。</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li>
-                <h3>我本身已經用緊 Rime 喇噃，噉要點樣加粵語拼音落 Rime 度？</h3>
-                <div class="tabbed select-platform">
-                  <input type="radio" name="faq2" id="faq2-windows" />
-                  <input type="radio" name="faq2" id="faq2-mac" />
-                  <input type="radio" name="faq2" id="faq2-linux" />
-                  <input type="radio" name="faq2" id="faq2-android" />
-                  <input type="radio" name="faq2" id="faq2-ios" />
-                  <div class="tabs">
-                    <label for="faq2-windows">Windows</label>
-                    <label for="faq2-mac">Mac</label>
-                    <label for="faq2-linux">Linux</label>
-                    <label for="faq2-android">Android</label>
-                    <label for="faq2-ios">iOS</label>
+                </li>
+                <li>
+                  <h3>我本身已經用緊 Rime 喇噃，噉要點樣加粵語拼音落 Rime 度？</h3>
+                  <div class="tabbed select-platform">
+                    <input type="radio" name="faq2" id="faq2-windows" />
+                    <input type="radio" name="faq2" id="faq2-mac" />
+                    <input type="radio" name="faq2" id="faq2-linux" />
+                    <input type="radio" name="faq2" id="faq2-android" />
+                    <input type="radio" name="faq2" id="faq2-ios" />
+                    <div class="tabs">
+                      <label for="faq2-windows">Windows</label>
+                      <label for="faq2-mac">Mac</label>
+                      <label for="faq2-linux">Linux</label>
+                      <label for="faq2-android">Android</label>
+                      <label for="faq2-ios">iOS</label>
+                    </div>
+                    <div class="tab-content">
+                      <div>
+                        <!-- Windows -->
+                        <ol>
+                          <li>用 <kbd class="windows-key"></kbd> + <kbd>Space</kbd> 切換去小狼毫輸入法。</li>
+                          <li>喺個「中」字上面右擊，揀 <var>輸入法設定</var>。</li>
+                          <img alt="常見問題" src="./assets/faq2-windows1.png" />
+                          <li>撳 <var>獲取更多輸入方案…</var>。</li>
+                          <img alt="常見問題" src="./assets/faq2-windows2.png" />
+                          <li>
+                            然後喺彈出嚟個命令行界面，輸入 <code>cantonese</code>，然後撳 <kbd>Enter</kbd>。跟住分別輸入 <code>emoji</code> 同埋 <code>sgalal/rime-opencc-32bit-latest</code> 嚟安裝
+                            Emoji 套件同埋最新版嘅繁簡轉換套件。
+                          </li>
+                          <li>
+                            閂咗「Rime package installer」個視窗佢，去返「輸入法設定」個版面，勾選「粵語拼音」，然後撳
+                            <var>中</var>。
+                          </li>
+                          <li>跟住揀返自己中意嘅配色，再撳 <var>中</var> 嚟完成設定</li>
+                          <li>去返選單度撳 <var>重新部署</var>，等個程式處理詞庫資料。</li>
+                          <li>跟住撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</li>
+                        </ol>
+                      </div>
+                      <div>
+                        <!-- Mac -->
+                        <ol>
+                          <li>
+                            打開你嘅終端運行下面呢句話
+                            <pre><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
+                          </li>
+                          <li>其中佢可能會彈出叫你安裝 git，要撳允許，冇 git 裝唔到 plum。運行完之後重新部署。</li>
+                          <li>跟住撳個 <kbd>Ctrl</kbd> 同 <kbd>`</kbd>，就可以見到「粵語拼音」嘞</li>
+                          <li>
+                            更多問題請參見
+                            <a href="https://github.com/rime/rime-cantonese/wiki/macOS-%E9%80%B2%E9%9A%8E%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B">macOS 進階安裝教程</a>或者去
+                            <a href="https://t.me/rime_cantonese">Telegram 羣組</a>諮詢。
+                          </li>
+                        </ol>
+                      </div>
+                      <div>
+                        <!-- Linux -->
+                        <ol>
+                          <li>
+                            如果你已經用緊 ibus，可以直接打開終端運行下面呢句話
+                            <pre><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
+                          </li>
+                          <li>跟住撳 <kbd>Ctrl</kbd> 同 <kbd>`</kbd>，就可以見到「粵語拼音」嘞</li>
+                          <li>
+                            更多問題請參見
+                            <a href="https://github.com/rime/rime-cantonese/wiki/Ubuntu-Pop!_OS-%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B">Ubuntu Pop!_OS 安裝教程</a>、
+                            <a href="https://github.com/rime/rime-cantonese/wiki/Arch-Linux-%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B">Arch Linux 安裝教程</a>或者去
+                            <a href="https://t.me/rime_cantonese">Telegram 羣組</a>諮詢。
+                          </li>
+                        </ol>
+                      </div>
+                      <div>
+                        <!-- Android -->
+                        <p>詳情請去 <a href="https://t.me/rime_cantonese">Telegram 羣組</a>諮詢。</p>
+                      </div>
+                      <div>
+                        <!-- iOS -->
+                        <h3>iRime 輸入法</h3>
+                        <p>去 iRime 輸入法嘅「語言列表」入面，揀「粵語拼音」就可以啓用粵拼。</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="tab-content">
-                    <div>
-                      <!-- Windows -->
-                      <ol>
-                        <li>用 <kbd class="windows-key"></kbd> + <kbd>Space</kbd> 切換去小狼毫輸入法。</li>
-                        <li>喺個「中」字上面右擊，揀 <var>輸入法設定</var>。</li>
-                        <img alt="常見問題" src="./assets/faq2-windows1.png" />
-                        <li>撳 <var>獲取更多輸入方案…</var>。</li>
-                        <img alt="常見問題" src="./assets/faq2-windows2.png" />
-                        <li>
-                          然後喺彈出嚟個命令行界面，輸入 <code>cantonese</code>，然後撳 <kbd>Enter</kbd>。跟住分別輸入 <code>emoji</code> 同埋 <code>sgalal/rime-opencc-32bit-latest</code> 嚟安裝 Emoji
-                          套件同埋最新版嘅繁簡轉換套件。
-                        </li>
-                        <li>
-                          閂咗「Rime package installer」個視窗佢，去返「輸入法設定」個版面，勾選「粵語拼音」，然後撳
-                          <var>中</var>。
-                        </li>
-                        <li>跟住揀返自己中意嘅配色，再撳 <var>中</var> 嚟完成設定</li>
-                        <li>去返選單度撳 <var>重新部署</var>，等個程式處理詞庫資料。</li>
-                        <li>跟住撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</li>
-                      </ol>
-                    </div>
-                    <div>
-                      <!-- Mac -->
-                      <ol>
-                        <li>
-                          打開你嘅終端運行下面呢句話
-                          <pre><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
-                        </li>
-                        <li>其中佢可能會彈出叫你安裝 git，要撳允許，冇 git 裝唔到 plum。運行完之後重新部署。</li>
-                        <li>跟住撳個 <kbd>Ctrl</kbd> 同 <kbd>`</kbd>，就可以見到「粵語拼音」嘞</li>
-                        <li>
-                          更多問題請參見
-                          <a href="https://github.com/rime/rime-cantonese/wiki/macOS-%E9%80%B2%E9%9A%8E%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B">macOS 進階安裝教程</a>或者去
-                          <a href="https://t.me/rime_cantonese">Telegram 羣組</a>諮詢。
-                        </li>
-                      </ol>
-                    </div>
-                    <div>
-                      <!-- Linux -->
-                      <ol>
-                        <li>
-                          如果你已經用緊 ibus，可以直接打開終端運行下面呢句話
-                          <pre><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
-                        </li>
-                        <li>跟住撳 <kbd>Ctrl</kbd> 同 <kbd>`</kbd>，就可以見到「粵語拼音」嘞</li>
-                        <li>
-                          更多問題請參見
-                          <a href="https://github.com/rime/rime-cantonese/wiki/Ubuntu-Pop!_OS-%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B">Ubuntu Pop!_OS 安裝教程</a>、
-                          <a href="https://github.com/rime/rime-cantonese/wiki/Arch-Linux-%E5%AE%89%E8%A3%9D%E6%95%99%E7%A8%8B">Arch Linux 安裝教程</a>或者去
-                          <a href="https://t.me/rime_cantonese">Telegram 羣組</a>諮詢。
-                        </li>
-                      </ol>
-                    </div>
-                    <div>
-                      <!-- Android -->
-                      <p>詳情請去 <a href="https://t.me/rime_cantonese">Telegram 羣組</a>諮詢。</p>
-                    </div>
-                    <div>
-                      <!-- iOS -->
-                      <h3>iRime 輸入法</h3>
-                      <p>去 iRime 輸入法嘅「語言列表」入面，揀「粵語拼音」就可以啓用粵拼。</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <h3>詞庫似乎好舊下，點更新個碼表？</h3>
-                <p>同上面加粵語拼音落 Rime 嘅步驟一模一樣。</p>
-              </li>
-              <li>
-                <h3>我裝咗都仲係唔用得，點算？</h3>
-                <p>無論遇到咩問題，都可以入我哋嘅 <a href="https://t.me/rime_cantonese">Telegram 羣組</a>揾大家幫手。</p>
-              </li>
-              <li>
-                <h3>有冇咩工具可以幫我查粵拼？</h3>
-                <p>
-                  遇到唔識拼音嘅字可以去
-                  <a href="https://jyut.net/">jyut.net</a>
-                  度查，呢個係最權威嘅在線粵音字典。電腦版嘅 Rime 粵拼可以撳 <kbd>`</kbd> 或者 <kbd>v</kbd> 或者
-                  <kbd>x</kbd> 嚟用普通話拼音、倉頡、筆畫反查。啱開始用粵拼打字嗰陣可能會唔熟手，唔使擔心，打得越多就會越熟練。只要打多幾次，粵拼就會變成你最自然嘅打字方法。
-                </p>
-                <p>如果仲有其他問題，都可以去 <a href="https://t.me/rime_cantonese">Telegram 羣組</a>入面揾大家解答。</p>
-              </li>
-            </ol>
-          </div>
-        </section>
-        <section class="bg-green-500 text-neutral-content">
+                </li>
+                <li>
+                  <h3>詞庫似乎好舊下，點更新個碼表？</h3>
+                  <p>同上面加粵語拼音落 Rime 嘅步驟一模一樣。</p>
+                </li>
+                <li>
+                  <h3>我裝咗都仲係唔用得，點算？</h3>
+                  <p>無論遇到咩問題，都可以入我哋嘅 <a href="https://t.me/rime_cantonese">Telegram 羣組</a>揾大家幫手。</p>
+                </li>
+                <li>
+                  <h3>有冇咩工具可以幫我查粵拼？</h3>
+                  <p>
+                    遇到唔識拼音嘅字可以去
+                    <a href="https://jyut.net/">jyut.net</a>
+                    度查，呢個係最權威嘅在線粵音字典。電腦版嘅 Rime 粵拼可以撳 <kbd>`</kbd> 或者 <kbd>v</kbd> 或者
+                    <kbd>x</kbd> 嚟用普通話拼音、倉頡、筆畫反查。啱開始用粵拼打字嗰陣可能會唔熟手，唔使擔心，打得越多就會越熟練。只要打多幾次，粵拼就會變成你最自然嘅打字方法。
+                  </p>
+                  <p>如果仲有其他問題，都可以去 <a href="https://t.me/rime_cantonese">Telegram 羣組</a>入面揾大家解答。</p>
+                </li>
+              </ol>
+            </div>
+          </section>
+          <section class="bg-green-500 text-neutral-content">
+            <div>
+              <h2 class="enter-lazy">仲諗乜嘢？</h2>
+              <p class="enter-lazy animation-delay-350">試下先啦！未試過又點會知呢？</p>
+              <a id="btn-download-final" class="btn-main mt-12"></a>
+            </div>
+          </section>
+        </main>
+        <footer>
           <div>
-            <h2 class="enter-lazy">仲諗乜嘢？</h2>
-            <p class="enter-lazy animation-delay-350">試下先啦！未試過又點會知呢？</p>
-            <a id="btn-download-final" class="btn-main mt-12"></a>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div>
-          <div id="columns">
-            <div>
-              <div>參考</div>
-              <a href="https://github.com/rime/rime-cantonese">rime-cantonese</a>
-              <a href="https://jyutping.org/">jyutping.org</a>
-              <a href="https://t.me/rime_cantonese">Telegram 用户交流組</a>
-            </div>
-            <div>
-              <div>實用工具</div>
-              <a href="https://jyut.net/">粵音資料集叢</a>
-              <a href="https://words.hk/">粵典</a>
-              <a href="https://chrome.google.com/webstore/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp">注入粵拼 Chrome 擴展</a>
-            </div>
-            <div>
-              <div>友情連結</div>
-              <a href="https://hambaanglaang.hk/">冚唪唥粵文</a>
-              <a href="https://resonate.hk/">迴響——粵語文學期刊</a>
-              <a href="https://shouji.sogou.com/interface/multilingual.php?language=3">搜狗粵拼輸入法</a>
-            </div>
-          </div>
-          <!-- Copyright Bar -->
-          <div id="copyright">
-            <div>
-              <div class="mt-2">
-                本站由<a href="https://github.com/CanCLID">粵語計算語言學基礎建設組</a>建成，遵循 CC BY 4.0 授權協議發佈，網站原始碼開放喺
-                <a href="https://github.com/CanCLID/jyutping.net">GitHub</a>，聯絡電郵：<a href="mailto:support@jyutping.org">support@jyutping.org</a>
+            <div id="columns">
+              <div>
+                <div>參考</div>
+                <a href="https://github.com/rime/rime-cantonese">rime-cantonese</a>
+                <a href="https://jyutping.org/">jyutping.org</a>
+                <a href="https://t.me/rime_cantonese">Telegram 用户交流組</a>
               </div>
-              <!-- Required Unicons (if you want) -->
-              <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                <a href="#" class="w-6 mx-1">
-                  <i class="uil uil-facebook-f"></i>
-                </a>
-                <a href="#" class="w-6 mx-1">
-                  <i class="uil uil-twitter-alt"></i>
-                </a>
-                <a href="#" class="w-6 mx-1">
-                  <i class="uil uil-youtube"></i>
-                </a>
-                <a href="#" class="w-6 mx-1">
-                  <i class="uil uil-linkedin"></i>
-                </a>
-                <a href="#" class="w-6 mx-1">
-                  <i class="uil uil-instagram"></i>
-                </a>
+              <div>
+                <div>實用工具</div>
+                <a href="https://jyut.net/">粵音資料集叢</a>
+                <a href="https://words.hk/">粵典</a>
+                <a href="https://chrome.google.com/webstore/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp">注入粵拼 Chrome 擴展</a>
+              </div>
+              <div>
+                <div>友情連結</div>
+                <a href="https://hambaanglaang.hk/">冚唪唥粵文</a>
+                <a href="https://resonate.hk/">迴響——粵語文學期刊</a>
+                <a href="https://shouji.sogou.com/interface/multilingual.php?language=3">搜狗粵拼輸入法</a>
+              </div>
+            </div>
+            <!-- Copyright Bar -->
+            <div id="copyright">
+              <div>
+                <div class="mt-2">
+                  本站由<a href="https://github.com/CanCLID">粵語計算語言學基礎建設組</a>建成，遵循 CC BY 4.0 授權協議發佈，網站原始碼開放喺
+                  <a href="https://github.com/CanCLID/jyutping.net">GitHub</a>，聯絡電郵：<a href="mailto:support@jyutping.org">support@jyutping.org</a>
+                </div>
+                <!-- Required Unicons (if you want) -->
+                <!--
+                <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+                  <a href="#" class="w-6 mx-1">
+                    <i class="uil uil-facebook-f"></i>
+                  </a>
+                  <a href="#" class="w-6 mx-1">
+                    <i class="uil uil-twitter-alt"></i>
+                  </a>
+                  <a href="#" class="w-6 mx-1">
+                    <i class="uil uil-youtube"></i>
+                  </a>
+                  <a href="#" class="w-6 mx-1">
+                    <i class="uil uil-linkedin"></i>
+                  </a>
+                  <a href="#" class="w-6 mx-1">
+                    <i class="uil uil-instagram"></i>
+                  </a>
+                </div>
+                -->
               </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
+    </div>
+    <div id="scroller">
+      <div id="scroll"></div>
     </div>
   </body>
 </html>

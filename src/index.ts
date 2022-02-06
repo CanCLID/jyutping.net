@@ -1,13 +1,40 @@
 import "core-js/actual/array/find-last-index";
+import data = require("./background.csv");
 import "./index.css";
 
 // Correct height for mobiles
 const hero = document.getElementById("hero")!;
+const content = document.getElementById("content")!;
+const scroll = document.getElementById("scroll")!;
 const resize = () => {
   hero.style.minHeight = innerHeight + "px";
+  scroll.style.height = content.clientHeight + "px";
 };
 addEventListener("resize", resize);
 addEventListener("load", resize);
+
+const container = document.getElementById("container")!;
+const colors = ["#ffbb5c", "#ffde69", "#a55cff", "#75caff", "#6f37b3", "#5b91b3"];
+data.forEach(({ w, x, y, z }) => {
+  const div = document.createElement("div");
+  div.textContent = w;
+  div.style.color = colors[z];
+  div.style.left = x + "vw";
+  div.style.top = y + "vw";
+  div.style.transform = `translateZ(-${(z + 1) * 5}vw)`;
+  div.className = "background-text";
+  container.appendChild(div);
+});
+
+((left: HTMLElement, right: HTMLElement) => {
+  let valLeft = left.scrollTop,
+    valRight = right.scrollTop;
+  (function loop() {
+    if (left.scrollTop !== valLeft) right.scrollTop = valRight = left.scrollTop;
+    if (right.scrollTop !== valRight) left.scrollTop = valLeft = right.scrollTop;
+    requestAnimationFrame(loop);
+  })();
+})(container, document.getElementById("scroller")!);
 
 /*
 Set download buttons
