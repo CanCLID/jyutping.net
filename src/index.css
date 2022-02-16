@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "I.Ming";
-  src: local("I.Ming") url("./assets/I.Ming-7.01.ttf") format("ttf");
+  src: local("I.Ming") format("ttf");
   font-display: swap;
 }
 
@@ -157,6 +157,7 @@
   perspective: 5vw;
   perspective-origin: center top;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {
     @apply hidden w-0 h-0;
   }
@@ -166,7 +167,7 @@
 }
 
 #scroller {
-  @apply absolute inset-0 overflow-x-hidden pointer-events-none;
+  @apply absolute inset-y-0 right-0 w-2 overflow-x-hidden;
   overflow-y: overlay;
 }
 

@@ -10,7 +10,13 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
+  "globals": {
+    "require": "readonly",
+    "module": "readonly",
+    "__dirname": "readonly"
+  },
   "rules": {
+    "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-non-null-assertion": "off"
   }
 }

@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const output = path.resolve(__dirname, "./dist");
 const include = path.resolve(__dirname, "./src");
 
+/** @type { import("webpack").Configuration } */
 module.exports = {
   mode: "production",
   entry: "./src/index.ts",
@@ -43,6 +44,9 @@ module.exports = {
     ],
   },
   devServer: {
+    host: "0.0.0.0",
+    useLocalIp: true,
+    openPage: "http://localhost:8080",
     contentBase: output,
     watchContentBase: true,
   },

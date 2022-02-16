@@ -2,20 +2,23 @@ import "core-js/actual/array/find-last-index";
 import data = require("./background.csv");
 import "./index.css";
 
-// Correct height for mobiles
+// Correct height for mobiles and set scroll height
 const hero = document.getElementById("hero")!;
 const content = document.getElementById("content")!;
 const scroll = document.getElementById("scroll")!;
-const resize = () => {
+((callback: () => void) => {
+  addEventListener("resize", callback);
+  addEventListener("load", callback);
+  callback();
+})(() => {
   hero.style.minHeight = innerHeight + "px";
   scroll.style.height = content.clientHeight + "px";
-};
-addEventListener("resize", resize);
-addEventListener("load", resize);
+});
 
+// Create parallax objects
 const container = document.getElementById("container")!;
 const colors = ["#ffbb5c", "#ffde69", "#a55cff", "#75caff", "#6f37b3", "#5b91b3"];
-data.forEach(({ w, x, y, z }) => {
+const divs = data.map(({ w, x, y, z }) => {
   const div = document.createElement("div");
   div.textContent = w;
   div.style.color = colors[z];
@@ -24,17 +27,43 @@ data.forEach(({ w, x, y, z }) => {
   div.style.transform = `translateZ(-${(z + 1) * 5}vw)`;
   div.className = "background-text";
   container.appendChild(div);
+  return div;
 });
 
+divs.push(document.getElementById("background") as HTMLDivElement);
+
+// Synchronize scroll bar
 ((left: HTMLElement, right: HTMLElement) => {
-  let valLeft = left.scrollTop,
-    valRight = right.scrollTop;
+  let value = left.scrollTop || right.scrollTop;
   (function loop() {
-    if (left.scrollTop !== valLeft) right.scrollTop = valRight = left.scrollTop;
-    if (right.scrollTop !== valRight) left.scrollTop = valLeft = right.scrollTop;
+    if (left.scrollTop !== value) {
+      right.scrollTop = value = left.scrollTop;
+      requestAnimationFrame(function wait() {
+        requestAnimationFrame(right.scrollTop === value ? loop : wait);
+      });
+      return;
+    }
+    if (right.scrollTop !== value) {
+      left.scrollTop = value = right.scrollTop;
+      requestAnimationFrame(function wait() {
+        requestAnimationFrame(left.scrollTop === value ? loop : wait);
+      });
+      return;
+    }
     requestAnimationFrame(loop);
   })();
 })(container, document.getElementById("scroller")!);
+
+// Hide parallax objects when they are not visible
+new IntersectionObserver(
+  entries => {
+    entries.forEach(({ isIntersecting }) => {
+      const display = isIntersecting ? "block" : "none";
+      divs.forEach(div => (div.style.display = display));
+    });
+  },
+  { root: null, rootMargin: "0px", threshold: 0 }
+).observe(document.getElementById("secondary")!);
 
 /*
 Set download buttons
