@@ -167,8 +167,10 @@
 }
 
 #scroller {
-  @apply absolute inset-y-0 right-0 w-2 overflow-x-hidden;
-  overflow-y: overlay;
+  @apply absolute inset-y-0 right-0 w-2 overflow-hidden;
+  #scroll {
+    @apply absolute right-0 w-full bg-purple-500 rounded-full;
+  }
 }
 
 #background {

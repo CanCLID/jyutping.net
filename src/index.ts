@@ -4,19 +4,32 @@ import "./index.css";
 
 // Correct height for mobiles and set scroll height
 const hero = document.getElementById("hero")!;
+const container = document.getElementById("container")!;
 const content = document.getElementById("content")!;
 const scroll = document.getElementById("scroll")!;
+let rem: number;
+let screenHeight: number;
+let contentHeight: number;
+let contentHeightRatio: number;
+let thumbHeightRatio: number;
+let thumbContentRatio: number;
 ((callback: () => void) => {
   addEventListener("resize", callback);
   addEventListener("load", callback);
   callback();
 })(() => {
   hero.style.minHeight = innerHeight + "px";
-  scroll.style.height = content.clientHeight + "px";
+  rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  screenHeight = container.clientHeight;
+  contentHeight = content.clientHeight;
+  contentHeightRatio = screenHeight / contentHeight;
+  thumbHeightRatio = Math.max(contentHeightRatio, rem / screenHeight);
+  thumbContentRatio = (1 - thumbHeightRatio) / (1 - contentHeightRatio);
+  scroll.style.height = thumbHeightRatio * 100 + "%";
+  scrollListener();
 });
 
 // Create parallax objects
-const container = document.getElementById("container")!;
 const colors = ["#ffbb5c", "#ffde69", "#a55cff", "#75caff", "#6f37b3", "#5b91b3"];
 const divs = data.map(({ w, x, y, z }) => {
   const div = document.createElement("div");
@@ -30,36 +43,38 @@ const divs = data.map(({ w, x, y, z }) => {
   return div;
 });
 
-divs.push(document.getElementById("background") as HTMLDivElement);
-
-// Synchronize scroll bar
-((left: HTMLElement, right: HTMLElement) => {
-  let value = left.scrollTop || right.scrollTop;
-  (function loop() {
-    if (left.scrollTop !== value) {
-      right.scrollTop = value = left.scrollTop;
-      requestAnimationFrame(function wait() {
-        requestAnimationFrame(right.scrollTop === value ? loop : wait);
-      });
-      return;
-    }
-    if (right.scrollTop !== value) {
-      left.scrollTop = value = right.scrollTop;
-      requestAnimationFrame(function wait() {
-        requestAnimationFrame(left.scrollTop === value ? loop : wait);
-      });
-      return;
-    }
-    requestAnimationFrame(loop);
-  })();
-})(container, document.getElementById("scroller")!);
+// Setup custom scroll bar
+function scrollListener() {
+  scroll.style.top = (container.scrollTop / contentHeight) * thumbContentRatio * 100 + "%";
+}
+container.addEventListener("scroll", scrollListener);
+scroll.addEventListener("mousedown", event => {
+  event.preventDefault();
+  container.removeEventListener("scroll", scrollListener);
+  const delta = scroll.offsetTop - event.pageY;
+  function mouseMove(event: MouseEvent) {
+    event.preventDefault();
+    const value = Math.min(Math.max((event.pageY + delta) / screenHeight / thumbContentRatio, 0), 1 - contentHeightRatio);
+    scroll.style.top = value * thumbContentRatio * 100 + "%";
+    container.scrollTop = contentHeight * value;
+  }
+  function mouseUp() {
+    document.removeEventListener("mousemove", mouseMove);
+    document.removeEventListener("mouseup", mouseUp);
+    container.addEventListener("scroll", scrollListener);
+  }
+  document.addEventListener("mousemove", mouseMove);
+  document.addEventListener("mouseup", mouseUp);
+});
 
 // Hide parallax objects when they are not visible
+const background = document.getElementById("background")!;
 new IntersectionObserver(
   entries => {
     entries.forEach(({ isIntersecting }) => {
       const display = isIntersecting ? "block" : "none";
       divs.forEach(div => (div.style.display = display));
+      background.style.transform = isIntersecting ? "" : "none";
     });
   },
   { root: null, rootMargin: "0px", threshold: 0 }
