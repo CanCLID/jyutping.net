@@ -2,6 +2,15 @@ import "core-js/actual/array/find-last-index";
 import data = require("./background.csv");
 import "./index.css";
 
+/*
+0: Windows (fallback)
+1: Mac
+2: Linux
+3: Android
+4: iOS
+*/
+const target = ["", "Mac", "Linux", "Android", "iPhone|iPad|iPod"].findLastIndex(r => new RegExp(r, "i").test(navigator.userAgent));
+
 // Correct height for mobiles and set scroll height
 const hero = document.getElementById("hero")!;
 const container = document.getElementById("container")!;
@@ -19,14 +28,16 @@ let thumbContentRatio: number;
   callback();
 })(() => {
   hero.style.minHeight = innerHeight + "px";
-  rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-  screenHeight = container.clientHeight;
-  contentHeight = content.clientHeight;
-  contentHeightRatio = screenHeight / contentHeight;
-  thumbHeightRatio = Math.max(contentHeightRatio, rem / screenHeight);
-  thumbContentRatio = (1 - thumbHeightRatio) / (1 - contentHeightRatio);
-  scroll.style.height = thumbHeightRatio * 100 + "%";
-  scrollListener();
+  if (target < 3) {
+    rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    screenHeight = container.clientHeight;
+    contentHeight = content.clientHeight;
+    contentHeightRatio = screenHeight / contentHeight;
+    thumbHeightRatio = Math.max(contentHeightRatio, rem / screenHeight);
+    thumbContentRatio = (1 - thumbHeightRatio) / (1 - contentHeightRatio);
+    scroll.style.height = thumbHeightRatio * 100 + "%";
+    scrollListener();
+  }
 });
 
 // Create parallax objects
@@ -47,25 +58,27 @@ const divs = data.map(({ w, x, y, z }) => {
 function scrollListener() {
   scroll.style.top = (container.scrollTop / contentHeight) * thumbContentRatio * 100 + "%";
 }
-container.addEventListener("scroll", scrollListener);
-scroll.addEventListener("mousedown", event => {
-  event.preventDefault();
-  container.removeEventListener("scroll", scrollListener);
-  const delta = scroll.offsetTop - event.pageY;
-  function mouseMove(event: MouseEvent) {
+if (target < 3) {
+  container.addEventListener("scroll", scrollListener);
+  scroll.addEventListener("mousedown", event => {
     event.preventDefault();
-    const value = Math.min(Math.max((event.pageY + delta) / screenHeight / thumbContentRatio, 0), 1 - contentHeightRatio);
-    scroll.style.top = value * thumbContentRatio * 100 + "%";
-    container.scrollTop = contentHeight * value;
-  }
-  function mouseUp() {
-    document.removeEventListener("mousemove", mouseMove);
-    document.removeEventListener("mouseup", mouseUp);
-    container.addEventListener("scroll", scrollListener);
-  }
-  document.addEventListener("mousemove", mouseMove);
-  document.addEventListener("mouseup", mouseUp);
-});
+    container.removeEventListener("scroll", scrollListener);
+    const delta = scroll.offsetTop - event.pageY;
+    function mouseMove(event: MouseEvent) {
+      event.preventDefault();
+      const value = Math.min(Math.max((event.pageY + delta) / screenHeight / thumbContentRatio, 0), 1 - contentHeightRatio);
+      scroll.style.top = value * thumbContentRatio * 100 + "%";
+      container.scrollTop = contentHeight * value;
+    }
+    function mouseUp() {
+      document.removeEventListener("mousemove", mouseMove);
+      document.removeEventListener("mouseup", mouseUp);
+      container.addEventListener("scroll", scrollListener);
+    }
+    document.addEventListener("mousemove", mouseMove);
+    document.addEventListener("mouseup", mouseUp);
+  });
+} else scroll.style.display = "none";
 
 // Hide parallax objects when they are not visible
 const background = document.getElementById("background")!;
@@ -80,16 +93,7 @@ new IntersectionObserver(
   { root: null, rootMargin: "0px", threshold: 0 }
 ).observe(document.getElementById("secondary")!);
 
-/*
-Set download buttons
-0: Windows (fallback)
-1: Mac
-2: Linux
-3: Android
-4: iOS
-*/
-const target = ["", "Mac", "Linux", "Android", "iPhone|iPad|iPod"].findLastIndex(r => new RegExp(r, "i").test(navigator.userAgent));
-
+// Set download buttons
 const platforms = document.getElementById("platforms")!;
 const display = platforms.children[target] as HTMLAnchorElement;
 
