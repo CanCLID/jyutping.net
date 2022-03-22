@@ -18,11 +18,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        include,
-        use: "html-loader",
-      },
-      {
         test: /\.ts$/i,
         include,
         use: "ts-loader",
@@ -56,6 +51,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      urls: require("./src/urls.json"),
     }),
   ],
   optimization: {
