@@ -143,7 +143,7 @@ const observer = new IntersectionObserver(
   entries => {
     entries.forEach(({ target, isIntersecting }) => {
       if (isIntersecting) {
-        target.classList.add("animation-running");
+        target.classList.add("![animation-play-state:running]");
         observer.unobserve(target);
       }
     });

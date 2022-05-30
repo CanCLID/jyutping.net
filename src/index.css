@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-purple-500 rounded-full;
+  @apply bg-violet-500 rounded-full;
 }
 
 ::-webkit-scrollbar-track {
@@ -136,18 +136,17 @@
 }
 
 .enter-lazy {
-  @apply animation-enter animation-delay-100 animation-paused;
+  @apply animation-enter [animation-delay:100ms] [animation-play-state:paused];
 }
 
 .animation-platform-running a {
-  @apply animation-running !important;
+  @apply [animation-play-state:running] !important;
 }
 
 .windows-key {
-  @apply w-6;
-  padding-right: 0.3rem;
+  @apply w-6 pr-[0.3rem];
   img {
-    @apply my-0 filter invert !important;
+    @apply my-0 invert !important;
   }
 }
 
@@ -169,7 +168,7 @@
 #scroller {
   @apply absolute inset-y-0 right-0 w-2 overflow-hidden;
   #scroll {
-    @apply absolute right-0 w-full bg-purple-500 rounded-full;
+    @apply absolute right-0 w-full bg-violet-500 rounded-full;
   }
 }
 
@@ -197,18 +196,18 @@
     #box {
       @apply flex flex-col lg:flex-row-reverse max-w-6xl;
       > img {
-        @apply w-full mb-6 lg:mb-0 rounded-lg shadow-2xl animation-fade-in animation-delay-500;
+        @apply w-full mb-6 lg:mb-0 rounded-lg shadow-2xl animation-fade-in [animation-delay:500ms];
       }
       > div {
         @apply mr-8;
         h1 {
-          @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold whitespace-nowrap animation-enter animation-delay-150;
+          @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold whitespace-nowrap animation-enter [animation-delay:150ms];
         }
         p {
-          @apply my-4 md:my-6 lg:my-8 text-lg md:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap leading-snug animation-enter animation-delay-400;
+          @apply my-4 md:my-6 lg:my-8 text-lg md:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap leading-snug animation-enter [animation-delay:400ms];
         }
         .btn-group {
-          @apply animation-enter animation-delay-650;
+          @apply animation-enter [animation-delay:650ms];
           #btn-more {
             @apply px-2 md:px-3;
             > img {
@@ -224,7 +223,7 @@
           }
         }
         #rime-outer {
-          @apply animation-enter animation-delay-900 mt-4 md:mt-6 md:text-lg font-semibold;
+          @apply animation-enter [animation-delay:900ms] mt-4 md:mt-6 md:text-lg font-semibold;
           #btn-rime {
             @apply duration-200;
           }
@@ -265,14 +264,14 @@ section:not(#hero) {
     @screen lg {
       flex-basis: 16rem;
     }
-    @apply btn btn-primary card shadow-xl h-auto animation-enter-platform animation-paused;
+    @apply btn btn-primary card shadow-xl h-auto animation-enter-platform [animation-play-state:paused];
     > div {
       @apply card-body mx-auto pt-7 pb-6 lg:py-8;
       img {
         @apply h-20;
       }
       h4 {
-        @apply card-title text-2xl lg:text-3xl mt-4;
+        @apply card-title justify-center text-2xl lg:text-3xl mt-4;
       }
       p {
         @apply mt-0 text-lg lg:text-xl font-light;
