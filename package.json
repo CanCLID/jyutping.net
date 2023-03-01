@@ -23,6 +23,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
+    "core-js": "^3.29.0",
     "daisyui": "^2.51.2",
     "eslint": "^8.35.0",
     "parcel": "^2.8.3",

@@ -1,3 +1,4 @@
+import "../node_modules/core-js/modules/es.array.find-last-index";
 import data from "./background.csv";
 import "./index.css";
 
