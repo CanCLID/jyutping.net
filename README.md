@@ -1,6 +1,6 @@
 # 粵語拼音輸入法下載網站
 
-網站由 tailwindcss 同 typescript 寫成。
+網站由 TailwindCSS 同 TypeScript 寫成。
 
 ## 待完成項目表
 

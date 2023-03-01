@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "strict": true
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["src"]
 }

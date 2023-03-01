@@ -1,5 +1,4 @@
-import "core-js/actual/array/find-last-index";
-import data = require("./background.csv");
+import data from "./background.csv";
 import "./index.css";
 
 /*

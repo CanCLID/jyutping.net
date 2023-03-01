@@ -5,4 +5,4 @@ declare type data = {
   z: number;
 }[];
 declare const data: data;
-export = data;
+export default data;

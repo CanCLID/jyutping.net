@@ -30,6 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet" />
+    <script src="index.ts" type="module"></script>
   </head>
   <body>
     <div id="container">
@@ -72,14 +73,14 @@
               <h2 class="enter-lazy">全平台支援</h2>
               <p class="text-2xl whitespace-nowrap enter-lazy ![animation-delay:400ms]">包含粵語拼音嘅<wbr /> Rime 輸入法套件安裝檔</p>
               <div id="platforms">
-                <a href="<%= htmlWebpackPlugin.options.urls.windows %>" class="![animation-delay:50ms]">
+                <a href="{{ urls.windows }}" class="![animation-delay:50ms]">
                   <div>
                     <img alt="Windows" src="./assets/windows.svg" />
                     <h4>Windows</h4>
                     <p>小狼毫 Weasel</p>
                   </div>
                 </a>
-                <a href="<%= htmlWebpackPlugin.options.urls.mac %> " class="![animation-delay:200ms]">
+                <a href="{{ urls.mac }}" class="![animation-delay:200ms]">
                   <div>
                     <img alt="Mac" src="./assets/mac.svg" />
                     <h4>Mac</h4>
