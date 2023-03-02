@@ -5,8 +5,7 @@
   "scripts": {
     "lint": "eslint src",
     "start": "parcel src/index.html --open --port 8080",
-    "build": "parcel build src/index.html",
-    "prestart": "npm run build -w transformers/csv"
+    "build": "parcel build src/index.html"
   },
   "browserslist": {
     "production": [
@@ -27,15 +26,12 @@
     "daisyui": "^2.51.2",
     "eslint": "^8.35.0",
     "parcel": "^2.8.3",
-    "parcel-transformer-csv": "file:transformers/csv",
+    "parcel-transformer-papaparse": "^0.1.0",
     "postcss": "^8.4.21",
     "posthtml-expressions": "^1.11.0",
     "tailwindcss": "^3.2.7",
     "typescript": "^5.0.0-beta"
   },
-  "workspaces": [
-    "transformers/*"
-  ],
   "author": "CanCLID",
   "license": "BSD-2-Clause"
 }

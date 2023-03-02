@@ -2,7 +2,7 @@
   "extends": "@parcel/config-default",
   "transformers": {
     "*.csv": [
-      "parcel-transformer-csv"
+      "parcel-transformer-papaparse"
     ]
   }
 }
