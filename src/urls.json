@@ -1,4 +1,4 @@
 {
-  "windows": "https://github.com/rime/rime-cantonese/releases/download/2023.06.15/windows-weasel-2023.06.15-installer.exe",
-  "mac": "https://github.com/rime/rime-cantonese/releases/download/2023.02.08/macOS-v0.16.2-2023.02.08-installer.pkg"
+  "windows": "https://github.com/rime/rime-cantonese/releases/download/latest/weasel-0.16.3-rime-cantonese.exe",
+  "mac": "https://github.com/rime/rime-cantonese/releases/download/latest/Squirrel-1.0.2-rime-cantonese.pkg"
 }
