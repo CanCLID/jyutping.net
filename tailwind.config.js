@@ -4,8 +4,8 @@ module.exports = {
   content: ["./src/**/*"],
   theme: {
     fontFamily: {
-      sans: ["'I.Ming'", "Open Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
-      serif: ["'I.Ming'", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace", "monospace"],
+      sans: ["Chocolate Classical Sans", "Open Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
+      serif: ["Chocolate Classical Sans", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace", "monospace"],
     },
   },
   plugins: [require("daisyui")],

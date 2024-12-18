@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "I.Ming";
-  src: local("I.Ming") format("ttf");
-  font-display: swap;
-}
-
 ::-webkit-scrollbar {
   @apply w-2 h-2;
 }
