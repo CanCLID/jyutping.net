@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint src",
     "start": "parcel src/index.html --open --port 8080",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --public-url https://jyutping.net"
   },
   "browserslist": {
     "production": [
