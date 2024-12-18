@@ -35,11 +35,11 @@
   }
 
   pre {
-    @apply overflow-auto select-all;
+    @apply overflow-auto;
   }
 
   code {
-    @apply px-1 py-0.5 text-base text-gray-800 bg-gray-100 align-text-bottom rounded;
+    @apply px-1 py-0.5 text-base text-gray-800 bg-gray-100 align-text-bottom rounded select-all;
   }
 
   var {
@@ -51,11 +51,11 @@
   }
 
   ul {
-    @apply list-disc ml-4;
+    @apply list-disc ml-6;
   }
 
   ol {
-    @apply list-decimal ml-4;
+    @apply list-decimal ml-6;
   }
 
   li {
@@ -142,6 +142,10 @@
   img {
     @apply my-0 invert !important;
   }
+}
+
+var.windows-key {
+  @apply w-7 pl-[0.3rem] pr-[0.4rem];
 }
 
 #container {
