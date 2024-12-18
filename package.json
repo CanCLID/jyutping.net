@@ -20,17 +20,17 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
-    "core-js": "^3.29.0",
-    "daisyui": "^2.51.2",
-    "eslint": "^8.35.0",
-    "parcel": "^2.8.3",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "core-js": "^3.39.0",
+    "daisyui": "^2.52.0",
+    "eslint": "^8.57.1",
+    "parcel": "^2.13.3",
     "parcel-transformer-papaparse": "^0.1.0",
-    "postcss": "^8.4.21",
-    "posthtml-expressions": "^1.11.0",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^5.0.0-beta"
+    "postcss": "^8.4.49",
+    "posthtml-expressions": "^1.11.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
   },
   "author": "CanCLID",
   "license": "BSD-2-Clause"
