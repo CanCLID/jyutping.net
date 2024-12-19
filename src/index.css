@@ -138,14 +138,10 @@
 }
 
 .windows-key {
-  @apply w-6 pr-[0.3rem];
+  @apply w-[1.625rem] pl-[0.3125rem] pr-[0.375rem];
   img {
     @apply my-0 invert !important;
   }
-}
-
-var.windows-key {
-  @apply w-7 pl-[0.3rem] pr-[0.4rem];
 }
 
 #container {
