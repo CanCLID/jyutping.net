@@ -1,14 +1,38 @@
-/** @type { import("tailwindcss/tailwind-config").TailwindConfig } */
-module.exports = {
+import daisyui from "daisyui";
+
+import type { Config as DaisyUIConfig } from "daisyui";
+import type { Config } from "tailwindcss";
+
+export default {
   important: true,
-  content: ["./src/**/*"],
+  content: ["./index.html", "./src/**/*"],
   theme: {
     fontFamily: {
-      sans: ["Chocolate Classical Sans", "Open Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
-      serif: ["Chocolate Classical Sans", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace", "monospace"],
+      sans: [
+        "Chocolate Classical Sans",
+        "Open Sans",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Ubuntu",
+        "Helvetica Neue",
+        "Noto Sans",
+        "Liberation Sans",
+        "Arial",
+        "Microsoft JhengHei",
+        "Microsoft JhengHei UI",
+        "Noto Sans HK",
+        "Noto Sans CJK HK",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [daisyui],
   daisyui: {
     themes: [
       {
@@ -36,5 +60,5 @@ module.exports = {
         },
       },
     ],
-  },
-};
+  } satisfies DaisyUIConfig,
+} satisfies Config;

@@ -1,4 +1,4 @@
-import "../node_modules/core-js/modules/es.array.find-last-index";
+import "core-js/actual/array/find-last-index";
 import data from "./background.csv";
 import "./index.css";
 
@@ -48,7 +48,7 @@ const divs = data.map(({ w, x, y, z }) => {
   div.style.color = colors[z];
   div.style.left = x + "vw";
   div.style.top = y + "vw";
-  div.style.transform = `translateZ(-${(z + 1) * 5}vw)`;
+  div.style.transform = `translateZ(-${(+z + 1) * 5}vw)`;
   div.className = "background-text";
   container.appendChild(div);
   return div;
@@ -90,7 +90,7 @@ new IntersectionObserver(
       background.style.transform = isIntersecting ? "" : "none";
     });
   },
-  { root: null, rootMargin: "0px", threshold: 0 }
+  { root: null, rootMargin: "0px", threshold: 0 },
 ).observe(document.getElementById("secondary")!);
 
 // Set download buttons
@@ -148,7 +148,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { root: null, rootMargin: "0px", threshold: 0.5 }
+  { root: null, rootMargin: "0px", threshold: 0.5 },
 );
 
 [].forEach.call(document.getElementsByClassName("enter-lazy"), (element: Element) => observer.observe(element));
@@ -163,5 +163,5 @@ new IntersectionObserver(
       }
     });
   },
-  { root: null, rootMargin: "0px", threshold: 0.25 }
+  { root: null, rootMargin: "0px", threshold: 0.25 },
 ).observe(other);

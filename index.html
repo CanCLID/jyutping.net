@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-yue-Hant">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jyutping.net" />
-    <meta property="og:image" content="./assets/og-image.png" />
+    <meta property="og:image" content="https://jyutping.net/assets/og-image.png" />
     <meta name="twitter:title" content="粵語拼音輸入法 Jyutping IME" />
     <meta
       name="twitter:description"
@@ -23,7 +23,7 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Can_CLID" />
-    <meta name="twitter:image" content="./assets/og-image.png" />
+    <meta name="twitter:image" content="https://jyutping.net/assets/og-image.png" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8N1DMVXRF"></script>
     <script>
@@ -39,7 +39,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Palette+Mosaic&display=swap" rel="stylesheet" />
-    <script src="index.ts" type="module"></script>
+    <script src="./src/index.ts" type="module"></script>
   </head>
   <body>
     <div id="container">
@@ -82,14 +82,14 @@
               <h2 class="enter-lazy">全平台支援</h2>
               <p class="text-2xl whitespace-nowrap enter-lazy ![animation-delay:400ms]">包含粵語拼音嘅<wbr /> Rime 輸入法套件安裝檔</p>
               <div id="platforms">
-                <a href="{{ urls.windows }}" class="![animation-delay:50ms]">
+                <a href="%VITE_DOWNLOAD_URL_WINDOWS%" class="![animation-delay:50ms]">
                   <div>
                     <img alt="Windows" src="./assets/windows.svg" />
                     <h4>Windows</h4>
                     <p>小狼毫 Weasel</p>
                   </div>
                 </a>
-                <a href="{{ urls.mac }}" class="![animation-delay:200ms]">
+                <a href="%VITE_DOWNLOAD_URL_MAC%" class="![animation-delay:200ms]">
                   <div>
                     <img alt="Mac" src="./assets/mac.svg" />
                     <h4>Mac</h4>

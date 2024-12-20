@@ -3,11 +3,10 @@
 /dist
 /node_modules
 /.DS_Store
-/.parcel-cache
-/transformers/*/index.js
 
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 yarn.lock
+tsconfig.tsbuildinfo
