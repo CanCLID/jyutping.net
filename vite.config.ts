@@ -18,6 +18,10 @@ export default {
   build: {
     target: "ES2017",
     rollupOptions: {
+      input: {
+        index: "./index.html",
+        converter: "./converter.html",
+      },
       output: {
         assetFileNames: "[name].[hash].[ext]",
         chunkFileNames: "[name].[hash].js",
