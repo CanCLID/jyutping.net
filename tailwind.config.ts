@@ -3,33 +3,35 @@ import daisyui from "daisyui";
 import type { Config as DaisyUIConfig } from "daisyui";
 import type { Config } from "tailwindcss";
 
+const fallbackFonts = [
+  "Noto Sans",
+  "Open Sans",
+  "-apple-system",
+  "BlinkMacSystemFont",
+  "Segoe UI",
+  "Roboto",
+  "Ubuntu",
+  "Helvetica Neue",
+  "Liberation Sans",
+  "Arial",
+  "Noto Sans HK",
+  "Noto Sans CJK HK",
+  "Microsoft JhengHei",
+  "Microsoft JhengHei UI",
+  "sans-serif",
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji",
+];
+
 export default {
   important: true,
-  content: ["./index.html", "./src/**/*"],
+  content: ["./*.html", "./src/**/*"],
   theme: {
     fontFamily: {
-      sans: [
-        "Chocolate Classical Sans",
-        "Open Sans",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Segoe UI",
-        "Roboto",
-        "Ubuntu",
-        "Helvetica Neue",
-        "Noto Sans",
-        "Liberation Sans",
-        "Arial",
-        "Microsoft JhengHei",
-        "Microsoft JhengHei UI",
-        "Noto Sans HK",
-        "Noto Sans CJK HK",
-        "sans-serif",
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji",
-      ],
+      sans: ["Chocolate Classical Sans", ...fallbackFonts],
+      jyutping: ["VF Cantonese Tone Mark", ...fallbackFonts],
     },
   },
   plugins: [daisyui],

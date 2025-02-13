@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-yue-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>粵拼轉換器 Cantonese Jyutping Converter</title>
+    <meta
+      name="description"
+      content="線上轉粵拼同國際音標 IPA，最快最準。學習粵語方便工具。Cantonese Jyutping Converter, the fastest and most accurate online tool for converting Cantonese text to Jyutping and IPA. A convenient tool for learning Cantonese."
+    />
+    <meta property="og:title" content="粵拼轉換器 Cantonese Jyutping Converter" />
+    <meta name="keywords" content="Cantonese, Jyutping, IPA, converter, online tool, language learning, 粵語, 粵文, 粵拼, 轉換器, 粵語學習" />
+    <meta
+      property="og:description"
+      content="線上轉粵拼同國際音標 IPA，最快最準。學習粵語方便工具。Cantonese Jyutping Converter, the fastest and most accurate online tool for converting Cantonese text to Jyutping and IPA. A convenient tool for learning Cantonese."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jyutping.net/converter" />
+    <meta property="og:image" content="https://jyutping.net/assets/og-image.png" />
+    <meta name="twitter:title" content="粵語拼音輸入法 Jyutping IME" />
+    <meta
+      name="twitter:description"
+      content="線上轉粵拼同國際音標 IPA，最快最準。學習粵語方便工具。Cantonese Jyutping Converter, the fastest and most accurate online tool for converting Cantonese text to Jyutping and IPA. A convenient tool for learning Cantonese."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Can_CLID" />
+    <meta name="twitter:image" content="https://jyutping.net/assets/og-image.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8N1DMVXRF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-E8N1DMVXRF");
+    </script>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Noto+Sans&display=swap" rel="stylesheet" />
+    <script src="./src/converter.ts" type="module"></script>
+  </head>
+  <body class="bg-[#f0f6fc] flex flex-col justify-between min-h-screen">
+    <div class="flex-grow flex items-center justify-center my-4">
+      <div class="bg-[#fdfeff] flex flex-col gap-4 p-8 rounded-xl shadow-lg w-full max-w-2xl">
+        <h1 class="text-4xl text-center">粵拼轉換器</h1>
+        <div>
+          <label for="cantonese-input">輸入粵文</label>
+          <textarea id="cantonese-input" class="border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+        </div>
+        <div>
+          <label for="jyutping-output">輸出粵拼</label>
+          <output id="jyutping-output" class="font-jyutping"></output>
+          <div class="text-slate-500 text-sm">聲調僅為字體顯示效果，複製後如普通數字無異。</div>
+        </div>
+        <div>
+          <label for="ipa-output">輸出國際音標</label>
+          <output id="ipa-output" class="font-jyutping"></output>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="py-4 mb-2">
+    <div class="container mx-auto text-center text-slate-600">
+      <p>粵拼參考網：<a href="https://jyutping.org/jyutping" target="_blank" rel="noopener noreferrer">jyutping.org/jyutping</a></p>
+      <p>線上粵拼輸入法（適合教學用）：<a href="https://www.typeduck.hk/web/" target="_blank" rel="noopener noreferrer">typeduck.hk/web</a></p>
+      <p>
+        注入粵拼瀏覽器擴展：<a href="https://chromewebstore.google.com/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp" target="_blank" rel="noopener noreferrer">Chrome 版</a> |
+        <a href="https://addons.mozilla.org/firefox/addon/inject-jyutping/" target="_blank" rel="noopener noreferrer">Firefox 版</a>
+      </p>
+      <p><a href="/#footer" target="_blank">查看更多資源</a></p>
+      <p class="my-4">本站作者：<a href="https://github.com/CanCLID" target="_blank" rel="noopener noreferrer">粵語計算語言學基礎建設組（CanCLID）</a></p>
+      <p>← <a href="/" target="_blank">返回 jyutping.net</a></p>
+    </div>
+  </footer>
+</html>
