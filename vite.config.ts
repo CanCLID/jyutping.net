@@ -28,6 +28,7 @@ export default {
         entryFileNames: "[name].[hash].js",
         hashCharacters: "hex",
       },
+      external: ["to-jyutping"],
     },
   },
 } satisfies UserConfig;
