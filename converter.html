@@ -53,8 +53,9 @@
   </head>
   <body class="bg-base flex flex-col justify-between min-h-screen">
     <div class="flex-grow flex items-center justify-center my-4">
-      <div class="bg-sky-50 flex flex-col gap-4 p-8 rounded-xl w-full max-w-2xl">
+      <div class="bg-sky-50 flex flex-col gap-4 p-8 rounded-xs w-full max-w-2xl">
         <h1 class="text-4xl text-center">粵拼轉換器</h1>
+        <button class="btn btn-secondary w-fit btn-sm"><a href="/" class="no-underline lowercase text-gray-50">返去 jyutping.net</a></button>
         <div>
           <label for="cantonese-input">輸入粵文</label>
           <textarea id="cantonese-input" class="border-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
@@ -67,7 +68,6 @@
           <label for="ipa-output">輸出國際音標</label>
           <output id="ipa-output"></output>
         </div>
-        <button class="btn btn-secondary"><a href="/" target="_blank" class="no-underline text-blue-50 lowercase">返去 jyutping.net</a></button>
       </div>
     </div>
   </body>
