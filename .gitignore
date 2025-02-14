@@ -10,3 +10,5 @@
 .env.production.local
 yarn.lock
 tsconfig.tsbuildinfo
+.aider*
+.env

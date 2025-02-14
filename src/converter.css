@@ -16,7 +16,7 @@
 
   textarea,
   output {
-    @apply block bg-base-100 w-full my-2 px-2.5 py-2 min-h-40 border border-slate-200 border-opacity-85 rounded-md resize-none;
+    @apply block bg-base-100 w-full my-2 px-2.5 py-2 min-h-32  rounded-md resize-none;
     field-sizing: content;
   }
 
