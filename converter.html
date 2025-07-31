@@ -61,14 +61,26 @@
           <textarea id="cantonese-input" class="focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"></textarea>
         </div>
         <div class="flex-1 flex flex-col">
-          <label for="jyutping-output">輸出粵拼</label>
+          <div class="flex items-center justify-between gap-2">
+            <label for="jyutping-output">輸出粵拼</label>
+            <button class="btn-copy btn btn-sm flex gap-1.5 shadow-sm shadow-black/10 tooltip tooltip-success">
+              <div class="copy-icon"></div>
+              複製至剪貼簿
+            </button>
+          </div>
           <output id="jyutping-output" class="font-jyutping has-[+label_#show-tone-contours:checked]:font-jyutping-tone-contours"></output>
           <label class="flex items-center gap-1 w-fit text-xs text-base-content has-[:not(:checked)]:text-opacity-70 cursor-pointer"
             ><input type="checkbox" id="show-tone-contours" class="toggle toggle-xs" />顯示調形</label
           >
         </div>
         <div class="flex-1 flex flex-col">
-          <label for="ipa-output">輸出國際音標</label>
+          <div class="flex items-center justify-between gap-2">
+            <label for="ipa-output">輸出國際音標（IPA）</label>
+            <button class="btn-copy btn btn-sm flex gap-1.5 shadow-sm shadow-black/10 tooltip tooltip-success">
+              <div class="copy-icon"></div>
+              複製至剪貼簿
+            </button>
+          </div>
           <output id="ipa-output" class="font-jyutping"></output>
         </div>
       </div>

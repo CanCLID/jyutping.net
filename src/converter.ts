@@ -22,3 +22,13 @@ cantoneseInput.addEventListener("input", () => {
     }
   }
 });
+
+for (const btnCopy of document.getElementsByClassName("btn-copy") as HTMLCollectionOf<HTMLButtonElement>) {
+  btnCopy.addEventListener("click", () => {
+    navigator.clipboard.writeText(document.getElementById((btnCopy.previousElementSibling as HTMLLabelElement).htmlFor)!.textContent!);
+    btnCopy.dataset["tip"] = "已複製！";
+    btnCopy.classList.remove("tooltip-open-temporarily");
+    btnCopy.offsetWidth; // Trigger DOM reflow
+    btnCopy.classList.add("tooltip-open-temporarily");
+  });
+}

@@ -20,12 +20,8 @@
 
   textarea,
   output {
-    @apply block flex-1 bg-base-100 w-full my-2 px-2.5 py-2 min-h-12 rounded-md resize-none;
+    @apply block flex-1 bg-base-100 w-full my-2 px-2.5 py-2 min-h-12 rounded-md resize-none whitespace-pre-wrap;
     field-sizing: content;
-  }
-
-  output {
-    @apply whitespace-pre-wrap select-all;
   }
 
   output span {
@@ -34,6 +30,39 @@
 
   a {
     @apply text-primary hover:underline;
+  }
+}
+
+@layer components {
+  .copy-icon {
+    background-image: url(./assets/copy.svg);
+    width: 1.125em;
+    height: 1.125em;
+  }
+
+  .tooltip {
+    --tooltip-tail: 0.375rem;
+    --tooltip-offset: calc(100% + var(--tooltip-tail));
+    &::before {
+      @apply text-xs font-medium;
+    }
+    &.tooltip-open-temporarily {
+      &::before,
+      &::after {
+        animation: open-temporarily 2.5s linear forwards;
+      }
+    }
+  }
+}
+
+@keyframes open-temporarily {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  95% {
+    opacity: 1;
   }
 }
 
