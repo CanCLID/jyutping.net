@@ -172,7 +172,7 @@
   transform: translateZ(-35vw) scale(8);
   transform-origin: center top;
   img {
-    @apply min-h-screen object-cover;
+    @apply w-full min-h-screen object-cover;
   }
 }
 
