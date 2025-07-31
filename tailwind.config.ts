@@ -31,7 +31,8 @@ export default {
   theme: {
     fontFamily: {
       sans: ["Chocolate Classical Sans", ...fallbackFonts],
-      jyutping: ["VF Cantonese Tone Mark", ...fallbackFonts],
+      jyutping: fallbackFonts,
+      ["jyutping-tone-contours"]: ["VF-Canto-Ruby", ...fallbackFonts],
     },
   },
   plugins: [daisyui],

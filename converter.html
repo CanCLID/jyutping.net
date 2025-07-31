@@ -62,11 +62,14 @@
         </div>
         <div class="flex-1 flex flex-col">
           <label for="jyutping-output">輸出粵拼</label>
-          <output id="jyutping-output"></output>
+          <output id="jyutping-output" class="font-jyutping has-[+label_#show-tone-contours:checked]:font-jyutping-tone-contours"></output>
+          <label class="flex items-center gap-1 w-fit text-xs text-base-content has-[:not(:checked)]:text-opacity-70 cursor-pointer"
+            ><input type="checkbox" id="show-tone-contours" class="toggle toggle-xs" />顯示調形</label
+          >
         </div>
         <div class="flex-1 flex flex-col">
           <label for="ipa-output">輸出國際音標</label>
-          <output id="ipa-output"></output>
+          <output id="ipa-output" class="font-jyutping"></output>
         </div>
       </div>
     </main>
