@@ -84,11 +84,13 @@ if (target < 3) {
 const background = document.getElementById("background")!;
 new IntersectionObserver(
   entries => {
-    entries.forEach(({ isIntersecting }) => {
+    for (const { isIntersecting } of entries) {
       const display = isIntersecting ? "block" : "none";
-      divs.forEach(div => (div.style.display = display));
+      for (const div of divs) {
+        div.style.display = display;
+      }
       background.style.transform = isIntersecting ? "" : "none";
-    });
+    }
   },
   { root: null, rootMargin: "0px", threshold: 0 },
 ).observe(document.getElementById("secondary")!);
@@ -103,12 +105,12 @@ const inner = display.firstElementChild!;
 const logo = inner.firstElementChild!;
 const name = inner.children[1].textContent;
 
-["btn-download-hero", "btn-download-final"].forEach(id => {
+for (const id of ["btn-download-hero", "btn-download-final"]) {
   const element = document.getElementById(id) as HTMLAnchorElement;
   element.appendChild(logo.cloneNode(true));
   element.appendChild(document.createTextNode(target === 2 ? "睇下 Linux 下點搞" : `下載 ${name} 版`));
   element.href = link;
-});
+}
 
 // Make "其他版本" button scroll smoothly
 const other = document.getElementById("other")!;
@@ -129,39 +131,41 @@ document.getElementById("btn-rime")!.addEventListener("click", event => {
 });
 
 // Add Windows logo for Windows keyboard key
-[].forEach.call(document.getElementsByClassName("windows-key"), (item: HTMLElement) => {
+for (const item of document.getElementsByClassName("windows-key")) {
   item.appendChild(platforms.firstElementChild!.firstElementChild!.firstElementChild!.cloneNode(true));
-});
+}
 
 // Set default tabs according to target platform
-[].forEach.call(document.getElementsByClassName("select-platform"), (item: HTMLDivElement) => {
+for (const item of document.getElementsByClassName("select-platform")) {
   (item.children[target] as HTMLInputElement).checked = true;
-});
+}
 
 // Start animation when an element enters viewport
 const observer = new IntersectionObserver(
   entries => {
-    entries.forEach(({ target, isIntersecting }) => {
+    for (const { target, isIntersecting } of entries) {
       if (isIntersecting) {
         target.classList.add("![animation-play-state:running]");
         observer.unobserve(target);
       }
-    });
+    }
   },
   { root: null, rootMargin: "0px", threshold: 0.5 },
 );
 
-[].forEach.call(document.getElementsByClassName("enter-lazy"), (element: Element) => observer.observe(element));
+for (const element of document.getElementsByClassName("enter-lazy")) {
+  observer.observe(element);
+}
 
 // Special animation for platform buttons
 new IntersectionObserver(
   entries => {
-    entries.forEach(({ target, isIntersecting }) => {
+    for (const { target, isIntersecting } of entries) {
       if (isIntersecting) {
         target.classList.add("animation-platform-running");
         observer.unobserve(target);
       }
-    });
+    }
   },
   { root: null, rootMargin: "0px", threshold: 0.25 },
 ).observe(other);
