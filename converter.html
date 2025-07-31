@@ -52,7 +52,7 @@
     </script>
   </head>
   <body class="bg-base flex flex-col justify-between min-h-screen">
-    <div class="flex-grow flex items-center justify-center my-4">
+    <main class="flex-grow flex items-center justify-center my-4">
       <div class="bg-sky-50 flex flex-col gap-4 p-8 rounded-xs w-full max-w-2xl">
         <h1 class="text-4xl text-center">粵拼轉換器</h1>
         <button class="btn btn-secondary w-fit btn-sm"><a href="/" class="no-underline lowercase text-gray-50">返去 jyutping.net</a></button>
@@ -69,22 +69,22 @@
           <output id="ipa-output"></output>
         </div>
       </div>
-    </div>
+    </main>
+    <footer class="py-8 bg-blue-50">
+      <div class="container mx-auto text-center text-slate-600">
+        <div class="flex flex-wrap justify-center gap-4">
+          <p>粵拼參考網：<a href="https://jyutping.org/jyutping" target="_blank" rel="noopener noreferrer">jyutping.org/jyutping</a></p>
+          <p>線上粵拼輸入法（適合教學用）：<a href="https://www.typeduck.hk/web/" target="_blank" rel="noopener noreferrer">typeduck.hk/web</a></p>
+          <p>
+            注入粵拼瀏覽器擴展：<a href="https://chromewebstore.google.com/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp" target="_blank" rel="noopener noreferrer">Chrome 版</a> |
+            <a href="https://addons.mozilla.org/firefox/addon/inject-jyutping/" target="_blank" rel="noopener noreferrer">Firefox 版</a>
+          </p>
+          <p><a href="/#footer" target="_blank">查看更多資源</a></p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mt-4">
+          <p>本站作者：<a href="https://github.com/CanCLID" target="_blank" rel="noopener noreferrer">粵語計算語言學基礎建設組（CanCLID）</a></p>
+        </div>
+      </div>
+    </footer>
   </body>
-  <footer class="py-8 bg-blue-50">
-    <div class="container mx-auto text-center text-slate-600">
-      <div class="flex flex-wrap justify-center gap-4">
-        <p>粵拼參考網：<a href="https://jyutping.org/jyutping" target="_blank" rel="noopener noreferrer">jyutping.org/jyutping</a></p>
-        <p>線上粵拼輸入法（適合教學用）：<a href="https://www.typeduck.hk/web/" target="_blank" rel="noopener noreferrer">typeduck.hk/web</a></p>
-        <p>
-          注入粵拼瀏覽器擴展：<a href="https://chromewebstore.google.com/detail/inject-jyutping/lfgpgjkjglogbndlkikjgbbfoiofbdjp" target="_blank" rel="noopener noreferrer">Chrome 版</a> |
-          <a href="https://addons.mozilla.org/firefox/addon/inject-jyutping/" target="_blank" rel="noopener noreferrer">Firefox 版</a>
-        </p>
-        <p><a href="/#footer" target="_blank">查看更多資源</a></p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4 mt-4">
-        <p>本站作者：<a href="https://github.com/CanCLID" target="_blank" rel="noopener noreferrer">粵語計算語言學基礎建設組（CanCLID）</a></p>
-      </div>
-    </div>
-  </footer>
 </html>
