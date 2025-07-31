@@ -16,6 +16,7 @@ cantoneseInput.addEventListener("input", () => {
       const span = document.createElement("span");
       span.textContent = segment;
       ipaOutput.appendChild(span);
+      ipaOutput.appendChild(document.createElement("wbr"));
     } else {
       ipaOutput.appendChild(document.createTextNode(segment));
     }
