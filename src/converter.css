@@ -10,13 +10,17 @@
     }
   }
 
+  :root {
+    --btn-text-case: none;
+  }
+
   label {
-    @apply block text-slate-700 text-lg my-2;
+    @apply block text-slate-700 text-lg;
   }
 
   textarea,
   output {
-    @apply block bg-base-100 w-full my-2 px-2.5 py-2 min-h-32  rounded-md resize-none;
+    @apply block flex-1 bg-base-100 w-full my-2 px-2.5 py-2 min-h-12 rounded-md resize-none;
     field-sizing: content;
   }
 
