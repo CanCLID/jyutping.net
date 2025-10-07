@@ -10,6 +10,7 @@ import "./index.css";
 4: iOS
 */
 const target = ["", "Mac", "Linux", "Android", "iPhone|iPad|iPod"].findLastIndex(r => new RegExp(r, "i").test(navigator.userAgent));
+const LINUX = 2;
 
 // Correct height for mobiles and set scroll height
 const hero = document.getElementById("hero")!;
@@ -28,7 +29,8 @@ let thumbContentRatio: number;
   callback();
 })(() => {
   hero.style.minHeight = innerHeight + "px";
-  if (target < 3) {
+  if (target <= LINUX) {
+    // Desktop
     rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
     screenHeight = container.clientHeight;
     contentHeight = content.clientHeight;
@@ -58,7 +60,8 @@ const divs = data.map(({ w, x, y, z }) => {
 function scrollListener() {
   scroll.style.top = (container.scrollTop / contentHeight) * thumbContentRatio * 100 + "%";
 }
-if (target < 3) {
+if (target <= LINUX) {
+  // Desktop
   container.addEventListener("scroll", scrollListener);
   scroll.addEventListener("mousedown", event => {
     event.preventDefault();
@@ -78,7 +81,10 @@ if (target < 3) {
     document.addEventListener("mousemove", mouseMove);
     document.addEventListener("mouseup", mouseUp);
   });
-} else scroll.style.display = "none";
+} else {
+  // Mobile
+  scroll.style.display = "none";
+}
 
 // Hide parallax objects when they are not visible
 const background = document.getElementById("background")!;
@@ -108,27 +114,21 @@ const name = inner.children[1].textContent;
 for (const id of ["btn-download-hero", "btn-download-final"]) {
   const element = document.getElementById(id) as HTMLAnchorElement;
   element.appendChild(logo.cloneNode(true));
-  element.appendChild(document.createTextNode(target === 2 ? "睇下 Linux 下點搞" : `下載 ${name} 版`));
+  element.appendChild(document.createTextNode(target === LINUX ? "睇下 Linux 下點搞" : `下載 ${name} 版`));
   element.href = link;
 }
 
-// Make "其他版本" button scroll smoothly
-const other = document.getElementById("other")!;
-
-document.getElementById("btn-more")!.addEventListener("click", event => {
-  event.preventDefault();
-  other.scrollIntoView({ behavior: "smooth", block: "start" });
-  return false;
-});
-
-// Make "我已經用緊 Rime" button scroll smoothly
-const faq = document.getElementById("faq")!;
-
-document.getElementById("btn-rime")!.addEventListener("click", event => {
-  event.preventDefault();
-  faq.scrollIntoView({ behavior: "smooth", block: "start" });
-  return false;
-});
+// Make anchor buttons scroll smoothly
+for (const anchor of document.getElementsByTagName("a")) {
+  const href = anchor.getAttribute("href")!;
+  if (href.startsWith("#")) {
+    anchor.addEventListener("click", event => {
+      event.preventDefault();
+      document.querySelector(href)!.scrollIntoView({ behavior: "smooth", block: "start" });
+      return false;
+    });
+  }
+}
 
 // Add Windows logo for Windows keyboard key
 for (const item of document.getElementsByClassName("windows-key")) {
@@ -136,8 +136,22 @@ for (const item of document.getElementsByClassName("windows-key")) {
 }
 
 // Set default tabs according to target platform
-for (const item of document.getElementsByClassName("select-platform")) {
+const selectPlatformTabs = document.getElementsByClassName("select-platform");
+
+for (const item of selectPlatformTabs) {
   (item.children[target] as HTMLInputElement).checked = true;
+}
+
+// Set tabs when picking an alternative in the "Other Platforms" section
+for (const [index, platform] of [...platforms.children].entries()) {
+  const target = index === 5 ? 4 : index;
+  if (target < 5) {
+    platform.addEventListener("click", () => {
+      for (const item of selectPlatformTabs) {
+        (item.children[target] as HTMLInputElement).checked = true;
+      }
+    });
+  }
 }
 
 // Start animation when an element enters viewport
@@ -168,4 +182,4 @@ new IntersectionObserver(
     }
   },
   { root: null, rootMargin: "0px", threshold: 0.25 },
-).observe(other);
+).observe(document.getElementById("other")!);
