@@ -1,0 +1,120 @@
+#!/usr/bin/env bash
+
+if [[ "$OSTYPE" != "linux-gnu"* ]]; then
+    echo "This script is for Linux only."
+    echo "For Windows, please download Weasel from https://rime.im"
+    echo "For macOS, please download Squirrel from https://rime.im"
+    exit 1
+fi
+
+# Cross distribution package manager wrapper script
+PACAPT_SCRIPT=$(curl -fsSL https://github.com/icy/pacapt/raw/ng/pacapt)
+
+pacapt() {
+    bash -c "$PACAPT_SCRIPT" -- "$@"
+}
+
+echo "Updating package list..."
+sudo pacapt -Sy
+
+if ! command -v git &> /dev/null; then
+    sudo pacapt -S git --noconfirm
+fi
+
+FRONTEND="${1:-ibus}"
+
+# If no argument specified, detect what's already installed
+if [[ -z "$1" ]]; then
+    if command -v ibus &> /dev/null; then
+        FRONTEND="ibus"
+    elif command -v fcitx5 &> /dev/null; then
+        FRONTEND="fcitx5"
+    fi
+fi
+
+install_ibus() {
+    echo "Installing ibus/ibus-rime..."
+    if sudo pacapt -S ibus ibus-rime --noconfirm; then
+        echo ""
+        echo "Successfully installed ibus/ibus-rime"
+        export rime_frontend="ibus-rime"
+        return 0
+    else
+        return 1
+    fi
+}
+
+install_fcitx5() {
+    echo "Installing fcitx5/fcitx5-rime..."
+    if sudo pacapt -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-rime --noconfirm; then
+        echo ""
+        echo "Successfully installed fcitx5/fcitx5-rime"
+        export rime_frontend="fcitx5-rime"
+        return 0
+    else
+        return 1
+    fi
+}
+
+check_ibus_available() {
+    pacapt -Ss ibus ibus-rime &> /dev/null
+}
+
+check_fcitx5_available() {
+    pacapt -Ss fcitx5 fcitx5-rime fcitx5-qt fcitx5-gtk fcitx5-configtool &> /dev/null
+}
+
+case "$FRONTEND" in
+    ibus)
+        if ! install_ibus; then
+            echo "Failed to install ibus/ibus-rime."
+            if check_fcitx5_available; then
+                read -p "Would you like to try fcitx5 instead? (y/N) " -n 1 -r
+                echo
+                if [[ $REPLY =~ ^[Yy]$ ]]; then
+                    if ! install_fcitx5; then
+                        echo "Failed to install fcitx5/fcitx5-rime. Exiting."
+                        exit 1
+                    fi
+                else
+                    echo "Installation cancelled."
+                    exit 1
+                fi
+            else
+                echo "No alternative input method framework available. Exiting."
+                exit 1
+            fi
+        fi
+        ;;
+    fcitx5)
+        if ! install_fcitx5; then
+            echo "Failed to install fcitx5/fcitx5-rime."
+            if check_ibus_available; then
+                read -p "Would you like to try ibus instead? (y/N) " -n 1 -r
+                echo
+                if [[ $REPLY =~ ^[Yy]$ ]]; then
+                    if ! install_ibus; then
+                        echo "Failed to install ibus/ibus-rime. Exiting."
+                        exit 1
+                    fi
+                else
+                    echo "Installation cancelled."
+                    exit 1
+                fi
+            else
+                echo "No alternative input method framework available. Exiting."
+                exit 1
+            fi
+        fi
+        ;;
+    fcitx)
+        echo "Error: fcitx (version 4) is deprecated."
+        echo "Please use 'fcitx5' instead, or omit the argument to use ibus."
+        exit 1
+        ;;
+    *)
+        echo "Error: Unrecognized argument '$FRONTEND'"
+        echo "Usage: $0 [ibus|fcitx5]"
+        exit 1
+        ;;
+esac
