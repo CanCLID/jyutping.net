@@ -166,15 +166,45 @@
                     <div class="tab-content">
                       <div>
                         <!-- Windows -->
-                        <p>執行安裝檔，根據指示安裝。安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</p>
+                        <ol>
+                          <li>執行安裝檔，根據指示安裝。</li>
+                          <li>
+                            安裝完之後撳 <var class="windows-key"></var> + <kbd>Space</kbd> 切換去「小狼毫輸入法」就可以用粵語拼音打字嘞。
+                            <div class="text-base">可能需要撳多幾次，直至右下角顯示為有 icon 嘅「小狼毫輸入法」。</div>
+                          </li>
+                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
+                        </ol>
                       </div>
                       <div>
                         <!-- Mac -->
-                        <p>執行安裝檔，根據指示安裝。安裝完之後撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</p>
+                        <ol>
+                          <li>執行安裝檔，根據指示安裝。</li>
+                          <li>安裝完之後撳幾次 <kbd>🌐</kbd> 切換去「鼠鬚管輸入法」就可以用粵語拼音打字嘞。
+                            <details>
+                              <summary>如果見唔到有「鼠鬚管輸入法」</summary>
+                              請去系統設定撳 <var>鍵盤</var>，揾 <var>輸入方式</var>，撳 <var>編輯</var>，撳右下角嘅 <var>+</var> 號新增鍵盤，揾「鼠鬚管輸入法」／「Squirrel」，揾到之後撳 <var>新增</var>，再撳過 <kbd>🌐</kbd> 切換去「鼠鬚管輸入法」。
+                            </details>
+                          </li>
+                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
+                        </ol>
                       </div>
                       <div>
                         <!-- Linux -->
-                        <p>TODO：IBus 點樣啟用粵拼？</p>
+                        <ol>
+                          <li>
+                            打開「終端機」（Terminal）執行以下命令嚟安裝 ibus-rime 同粵語拼音<span class="text-base inline-block -mr-1.5">（安裝需時，請耐心等待）</span>：
+                            <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install | bash</code></pre>
+                            <details>
+                              <summary>安裝 fcitx5/fcitx5-rime（進階用户）</summary>
+                              如果你鍾意 fcitx5 多過 ibus，可以執行以下命令安裝：
+                              <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install | bash -s -- fcitx5</code></pre>
+                              如果你係第一次用 fcitx5，安裝後請根據 <a href="https://fcitx-im.org/wiki/Setup_Fcitx_5">https://fcitx-im.org/wiki/Setup_Fcitx_5</a> 同
+                              <a href="https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland">https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland</a> 設定環境變數同配置檔案。
+                            </details>
+                          </li>
+                          <li>打開輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span>，之後就可以用粵語拼音打字嘞。</li>
+                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
+                        </ol>
                       </div>
                       <div>
                         <!-- Android -->
@@ -182,7 +212,7 @@
                       </div>
                       <div>
                         <!-- iOS -->
-                        <p>安裝完「Cantoboard」或者「粵拼輸入法」App 之後，去系統設置 → 鍵盤度啓用粵拼鍵盤。</p>
+                        <p>安裝完「Cantoboard」或者「粵拼輸入法」App 之後，透過程式入面嘅掣跳去程式設定，撳 <var>鍵盤</var> → 開咗 <var><span class="-mx-3">（App 名）</span></var> 同埋 <var>允許全權取用</var> → 撳 <var>確定</var>，就可以啓用 App 鍵盤。</p>
                       </div>
                     </div>
                   </div>
@@ -206,7 +236,7 @@
                       <div>
                         <!-- Windows -->
                         <h3>方法一</h3>
-                        <p>直接執行上面嘅安裝檔重新安裝軟件，以更新<b>程式資料夾</b>入面嘅詞庫，前提係：</p>
+                        <p>直接執行上面嘅安裝檔重新安裝軟件嚟更新<b>程式資料夾</b>入面嘅詞庫，前提係：</p>
                         <ol>
                           <li>從來冇執行過方法二或者方法三。因為方法二同三會將新詞庫放喺<b>用户資料夾</b>，呢個資料夾入面嘅檔案會優先於<b>程式資料夾</b>。</li>
                           <li>你冇人手改動過<b>程式資料夾</b>入面嘅檔案。<span class="text-red-500 font-bold">呢啲變更喺安裝嗰陣會被覆蓋。</span></li>
@@ -219,51 +249,57 @@
                           <li>撳 <var>獲取更多輸入方案…</var>。</li>
                           <img alt="常見問題" src="./assets/faq2-windows2.png" />
                           <li>
-                            然後喺彈出嚟個命令行界面，撳<b>滑鼠右鍵</b>貼上以下內容：
-                            <pre><code>cantonese emoji-cantonese CanCLID/rime-loengfan lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
+                            複製以下內容，然後喺彈出嚟個命令行界面撳<b>滑鼠右鍵</b>貼上：
+                            <pre><code>cantonese emoji-cantonese CanCLID/rime-loengfan lotem/rime-octagram-data lotem/rime-octagram-data@hant</code></pre>
                           </li>
                           <li>閂咗「Rime package installer」個視窗佢，去返「方案選單設定」視窗勾選「粵語拼音」，然後撳 <var>中</var>。</li>
                           <li>跟住揀返自己鍾意嘅配色，再撳 <var>中</var> 嚟完成設定。</li>
-                          <li>去返個「中」字上面撳<b>滑鼠右鍵</b>，揀 <var>重新部署</var>，等個程式處理詞庫資料。<span class="text-base inline-block -m-1.5">（需時約 20 秒，請耐心等待。）</span></li>
-                          <li>跟住撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！），就可以睇到「粵語拼音」嘞。</li>
+                          <li>去返個「中」字上面撳<b>滑鼠右鍵</b>，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 20 秒，請耐心等待）</span>，之後就可以用粵語拼音打字嘞。</li>
+                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
                         <h3>方法三</h3>
                         <ol>
-                          <li>喺螢幕左下角個 <var class="windows-key"></var> 掣上面撳<b>滑鼠右鍵</b>，揀 <var>Windows PowerShell</var>。</li>
+                          <li>喺螢幕左下角個 <var class="windows-key"></var> 掣上面撳<b>滑鼠右鍵</b>，揀「終端機」（Terminal / Windows PowerShell）。</li>
                           <li>
-                            然後喺彈出嚟個命令行界面，撳<b>滑鼠右鍵</b>貼上以下內容：
-                            <pre><code>if (-not (Get-Command bash -ErrorAction SilentlyContinue)) { $gitBashPath = "C:\Program Files\Git\bin\bash.exe"; if (-not (Test-Path $gitBashPath)) { winget install --id Git.Git -e --source winget; } $bashCommand = $gitBashPath; } else { $bashCommand = "bash"; } & $bashCommand -c 'curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji-cantonese CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant'</code></pre>
+                            複製以下內容，然後喺彈出嚟個命令行界面撳<b>滑鼠右鍵</b>貼上：
+                            <pre><code>irm https://jyutping.net/rime-cantonese-install-schema.ps1 | iex</code></pre>
                           </li>
-                          <li>撳 <kbd>Enter</kbd> 執行命令並等待。</li>
+                          <li>撳 <kbd>Enter</kbd> 執行命令<span class="text-base inline-block -mr-1.5">（安裝需時，請耐心等待）</span>。</li>
                           <li>其中佢可能會彈出叫你安裝 git，要撳 <var>允許</var>，冇 git 裝唔到 plum。</li>
                           <li>
-                            喺螢幕右下角個「中」字上面撳<b>滑鼠右鍵</b>，揀 <var>重新部署</var>，等個程式處理詞庫資料。<span class="text-base inline-block -m-1.5">（需時約 20 秒，請耐心等待。）</span>
+                            喺螢幕右下角個「中」字上面撳<b>滑鼠右鍵</b>，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 20 秒，請耐心等待）</span>，之後就可以用粵語拼音打字嘞。</span>
                           </li>
-                          <li>跟住撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>，就可以見到「粵語拼音」嘞。</li>
+                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
                       </div>
                       <div>
                         <!-- Mac -->
                         <ol>
                           <li>
-                            打開「終端機」（Terminal），撳 <kbd>⌘ Cmd</kbd> + <kbd>V</kbd> 貼上以下內容：
-                            <pre><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji-cantonese CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
+                            複製以下內容，然後打開「終端機」（Terminal），撳 <kbd>⌘ Cmd</kbd> + <kbd>V</kbd> 貼上：
+                            <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install-schema | bash</code></pre>
                           </li>
-                          <li>撳 <kbd>Enter</kbd> 執行命令並等待。</li>
+                          <li>撳 <kbd>Enter</kbd> 執行命令<span class="text-base inline-block -mr-1.5">（安裝需時，請耐心等待）</span>。</li>
                           <li>其中佢可能會彈出叫你安裝 git，要撳 <var>允許</var>，冇 git 裝唔到 plum。</li>
-                          <li>打開螢幕右上角嘅輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料。<span class="text-base inline-block -m-1.5">（需時約 10 秒，請耐心等待。）</span></li>
-                          <li>跟住撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>，就可以見到「粵語拼音」嘞。</li>
+                          <li>打開螢幕右上角嘅輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span>，之後就可以用粵語拼音打字嘞。</li>
+                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
                       </div>
                       <div>
                         <!-- Linux -->
                         <ol>
                           <li>
-                            如果你已經用緊 ibus，可以直接打開「終端機」（Terminal）執行以下命令：
-                            <pre><code>curl -fsSL https://git.io/rime-install | bash -s -- cantonese emoji-cantonese CanCLID/rime-loengfan custom:set:config=default,key=installed_from,value=rime-cantonese custom:clear_schema_list custom:add:schema=jyut6ping3 custom:add:schema=cangjie5 custom:add:schema=stroke custom:add:schema=luna_pinyin lotem/rime-octagram-data lotem/rime-octagram-data@hant lotem/rime-octagram-data:customize:schema=jyut6ping3,model=hant</code></pre>
+                            如果你已經用緊 ibus-rime 或者 fcitx5-rime，可以直接打開「終端機」（Terminal）執行以下命令<span class="text-base inline-block -mr-1.5">（安裝需時，請耐心等待）</span>：
+                            <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install-schema | bash</code></pre>
+                            <details>
+                              <summary>如果你兩樣都用緊</summary>
+                              詞表預設會裝／更新落 ibus，如果想裝落 fcitx5，請執行以下命令：
+                              <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install-schema | bash -s -- fcitx5</code></pre>
+                            </details>
+                            <b>如果你有 ibus 但未有 ibus-rime 或者有 fcitx5 但未有 fcitx5-rime，請執行 ⒈ 嘅命令。</b>
                           </li>
-                          <li>打開輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料。<span class="text-base inline-block -m-1.5">（需時約 10 秒，請耐心等待。）</span></li>
-                          <li>跟住撳 <kbd>Ctrl</kbd> 同 <kbd>`</kbd>，就可以見到「粵語拼音」嘞。</li>
+                          <li>打開輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span>，之後就可以用粵語拼音打字嘞。</li>
+                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
                       </div>
                       <div>
