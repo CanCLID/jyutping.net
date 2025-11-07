@@ -169,26 +169,23 @@
                         <ol>
                           <li>執行安裝檔，根據指示安裝。</li>
                           <li>
-                            安裝完之後撳 <var class="windows-key"></var> + <kbd>Space</kbd> 切換去「小狼毫輸入法」就可以用粵語拼音打字嘞。
+                            喺打字嘅地方撳幾下鍵盤嘅 <var class="windows-key"></var> + <kbd>Space</kbd> 掣切換去「小狼毫輸入法」就可以用粵語拼音打字嘞。
                             <div class="text-base">可能需要撳多幾次，直至右下角顯示為有 icon 嘅「小狼毫輸入法」。</div>
                           </li>
-                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
+                        <p>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</p>
                       </div>
                       <div>
                         <!-- Mac -->
                         <ol>
                           <li>執行安裝檔，根據指示安裝。</li>
                           <li>
-                            安裝完之後撳幾次 <kbd>🌐</kbd> 切換去「鼠鬚管輸入法」就可以用粵語拼音打字嘞。
-                            <details>
-                              <summary>如果見唔到有「鼠鬚管輸入法」</summary>
-                              請去系統設定撳 <var>鍵盤</var>，揾 <var>輸入方式</var>，撳 <var>編輯</var>，撳右下角嘅 <var>+</var> 號新增鍵盤，揾「鼠鬚管輸入法」／「Squirrel」，揾到之後撳
-                              <var>新增</var>，再撳過 <kbd>🌐</kbd> 切換去「鼠鬚管輸入法」。
-                            </details>
+                            去系統設定撳 <var>鍵盤／Keyboard</var>，喺「輸入方式／Input Sources」一節撳 <var>編輯／Edit…</var>，撳右下角嘅
+                            <var>+</var> 號新增鍵盤，搜尋「鼠鬚管輸入法／Squirrel」，揾到之後撳 <var>新增／Add</var>。
                           </li>
-                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
+                          <li>喺打字嘅地方撳幾下鍵盤嘅 <kbd>🌐</kbd> 掣切換去「鼠鬚管輸入法／Squirrel」就可以用粵語拼音打字嘞。</li>
                         </ol>
+                        <p>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</p>
                       </div>
                       <div>
                         <!-- Linux -->
@@ -198,17 +195,23 @@
                             <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install | bash</code></pre>
                             <details>
                               <summary>安裝 fcitx5/fcitx5-rime（進階用户）</summary>
-                              如果你鍾意 fcitx5 多過 ibus，可以執行以下命令安裝：
+                              如果你鍾意 fcitx5 多過 ibus，或者你用緊嘅 Linux distribution 冇得用 ibus，可以執行以下命令安裝：
                               <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install | bash -s -- fcitx5</code></pre>
                               如果你係第一次用 fcitx5，安裝後請根據 <a href="https://fcitx-im.org/wiki/Setup_Fcitx_5">https://fcitx-im.org/wiki/Setup_Fcitx_5</a> 同
                               <a href="https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland">https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland</a> 設定環境變數同配置檔案。
                             </details>
                           </li>
                           <li>
-                            打開輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span>，之後就可以用粵語拼音打字嘞。
+                            去系統設定撳 <var>鍵盤／Keyboard</var> 或者 <var>地區及語言／Region & Language</var>，喺「輸入方式／Input Sources」一節撳 <var>+</var> 號新增鍵盤，撳
+                            <var>…</var> 顯示更多輸入法，搜尋「Rime」<span class="text-base">（<span>位於「中文／Chinese」或者「其他／Others」</span>）</span>，揾到之後撳 <var>新增／Add</var>。
                           </li>
-                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
+                          <li>喺打字嘅地方撳幾下鍵盤嘅 <kbd>Super</kbd>（<var class="windows-key"></var>）+ <kbd>Space</kbd> 掣切換去「Rime」輸入法。</li>
+                          <li>
+                            打開螢幕右上角或者右下角嘅輸入法選單，揀 <var>部署／Deploy</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span
+                            >，之後就可以用粵語拼音打字嘞。
+                          </li>
                         </ol>
+                        <p>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</p>
                       </div>
                       <div>
                         <!-- Android -->
@@ -242,15 +245,17 @@
                     <div class="tab-content">
                       <div>
                         <!-- Windows -->
+                        <h3>TL;DR</h3>
+                        <p>如果你唔小心裝咗 <a href="https://rime.im">rime.im</a> 嘅版本，發覺冇粵拼，而你冇鬥過任何嘢，<b class="text-green-700">重新裝一次上面嘅版本</b>冚咗佢即可。</p>
                         <h3>方法一</h3>
-                        <p>直接執行上面嘅安裝檔重新安裝軟件嚟更新<b>程式資料夾</b>入面嘅詞庫，前提係：</p>
+                        <p>直接重新安裝執行上面嘅安裝檔軟件嚟更新<b>程式資料夾</b>入面嘅詞庫，前提係：</p>
                         <ol>
                           <li>從來冇執行過方法二或者方法三。因為方法二同三會將新詞庫放喺<b>用户資料夾</b>，呢個資料夾入面嘅檔案會優先於<b>程式資料夾</b>。</li>
                           <li>你冇人手改動過<b>程式資料夾</b>入面嘅檔案。<span class="text-red-500 font-bold">呢啲變更喺安裝嗰陣會被覆蓋。</span></li>
                         </ol>
                         <h3>方法二</h3>
                         <ol>
-                          <li>用 <kbd class="windows-key"></kbd> + <kbd>Space</kbd> 切換去小狼毫輸入法。</li>
+                          <li>喺打字嘅地方撳幾下鍵盤嘅 <kbd class="windows-key"></kbd> + <kbd>Space</kbd> 掣切換去小狼毫輸入法。</li>
                           <li>喺螢幕右下角個「中」字上面撳<b>滑鼠右鍵</b>，揀 <var>輸入法設定</var>。</li>
                           <img alt="常見問題" src="./assets/faq2-windows1.png" />
                           <li>撳 <var>獲取更多輸入方案…</var>。</li>
@@ -265,8 +270,8 @@
                             去返個「中」字上面撳<b>滑鼠右鍵</b>，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 20 秒，請耐心等待）</span
                             >，之後就可以用粵語拼音打字嘞。
                           </li>
-                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
+                        <p>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</p>
                         <h3>方法三</h3>
                         <ol>
                           <li>喺螢幕左下角個 <var class="windows-key"></var> 掣上面撳<b>滑鼠右鍵</b>，揀「終端機」（Terminal / Windows PowerShell）。</li>
@@ -280,11 +285,20 @@
                             喺螢幕右下角個「中」字上面撳<b>滑鼠右鍵</b>，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 20 秒，請耐心等待）</span
                             >，之後就可以用粵語拼音打字嘞。
                           </li>
-                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
+                        <p>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</p>
                       </div>
                       <div>
                         <!-- Mac -->
+                        <h3>TL;DR</h3>
+                        <p>如果你唔小心裝咗 <a href="https://rime.im">rime.im</a> 嘅版本，發覺冇粵拼，而你冇鬥過任何嘢，<b class="text-green-700">重新裝一次上面嘅版本</b>冚咗佢即可。</p>
+                        <h3>方法一</h3>
+                        <p>直接重新安裝執行上面嘅安裝檔軟件嚟更新<b>程式資料夾</b>入面嘅詞庫，前提係：</p>
+                        <ol>
+                          <li>從來冇執行過方法二。因為方法二會將新詞庫放喺<b>用户資料夾</b>，呢個資料夾入面嘅檔案會優先於<b>程式資料夾</b>。</li>
+                          <li>你冇人手改動過<b>程式資料夾</b>入面嘅檔案。<span class="text-red-500 font-bold">呢啲變更喺安裝嗰陣會被覆蓋。</span></li>
+                        </ol>
+                        <h3>方法二</h3>
                         <ol>
                           <li>
                             複製以下內容，然後打開「終端機」（Terminal），撳 <kbd>⌘ Cmd</kbd> + <kbd>V</kbd> 貼上：
@@ -293,40 +307,42 @@
                           <li>撳 <kbd>Enter</kbd> 執行命令<span class="text-base inline-block -mr-1.5">（安裝需時，請耐心等待）</span>。</li>
                           <li>其中佢可能會彈出叫你安裝 git，要撳 <var>允許</var>，冇 git 裝唔到 plum。</li>
                           <li>
-                            打開螢幕右上角嘅輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span
+                            打開螢幕右上角嘅輸入法選單，揀 <var>重新部署／Redeploy</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span
                             >，之後就可以用粵語拼音打字嘞。
                           </li>
-                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
+                        <p>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</p>
                       </div>
                       <div>
                         <!-- Linux -->
                         <ol>
                           <li>
-                            如果你已經用緊 ibus-rime 或者 fcitx5-rime，可以直接打開「終端機」（Terminal）執行以下命令<span class="text-base inline-block -mr-1.5">（安裝需時，請耐心等待）</span>：
+                            如果你已經用緊 ibus-rime，可以直接打開「終端機」（Terminal）執行以下命令<span class="text-base inline-block -mr-1.5">（安裝需時，請耐心等待）</span>：
                             <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install-schema | bash</code></pre>
                             <details>
-                              <summary>如果你兩樣都用緊</summary>
+                              <summary>如果你用緊 fcitx5-rime</summary>
                               詞表預設會裝／更新落 ibus，如果想裝落 fcitx5，請執行以下命令：
                               <pre><code>curl -fsSL https://jyutping.net/rime-cantonese-install-schema | rime_frontend=fcitx5-rime bash</code></pre>
                             </details>
-                            <b>如果你有 ibus 但未有 ibus-rime 或者有 fcitx5 但未有 fcitx5-rime，請執行 ⒈ 嘅命令。</b>
+                            <b>如果你有 ibus 但未有 ibus-rime 或者有 fcitx5 但未有 fcitx5-rime，請執行第 ⒈ 條問題嘅命令。</b>
                           </li>
                           <li>
-                            打開輸入法選單，揀 <var>重新部署</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span>，之後就可以用粵語拼音打字嘞。
+                            打開螢幕右上角或者右下角嘅輸入法選單，揀 <var>部署／Deploy</var>，等個程式處理詞庫資料<span class="text-base inline-block -mr-1.5">（需時約 10 秒，請耐心等待）</span
+                            >，之後就可以用粵語拼音打字嘞。
                           </li>
-                          <li>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</li>
                         </ol>
+                        <p>撳 <kbd>Ctrl</kbd> + <kbd>`</kbd>（注意係數字 <kbd>1</kbd> 左邊嗰粒掣，唔係單引號！）可以更改輸入法設定或者切換去其他輸入方式。</p>
                       </div>
                       <div>
                         <!-- Android -->
                         <h3>同文 Trime</h3>
                         <p>想喺「Trime」用粵拼打字嘅朋友請去 <a href="https://t.me/rime_cantonese">Telegram 羣組</a>諮詢。</p>
+                        <p>唔想咁麻煩嘅話，建議直接去上面安裝「粵拼輸入法」App。</p>
                       </div>
                       <div>
                         <!-- iOS -->
                         <h3>iRime 輸入法</h3>
-                        <p>去「iRime」嘅「語言列表」入面，揀「粵語拼音」就可以啓用粵拼。</p>
+                        <p>開啓「iRime」App，去「語言列表」入面揀「粵語拼音」就可以啓用粵拼。</p>
                       </div>
                     </div>
                   </div>
