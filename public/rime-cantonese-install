@@ -4,6 +4,12 @@
 # This will export the rime_frontend variable
 source <(curl -fsSL https://jyutping.net/rime-install)
 
+echo ""
+echo "Installing IME files..."
+
 # Run the schema installation script
 # This uses the rime_frontend variable from the previous script
 source <(curl -fsSL https://jyutping.net/rime-cantonese-install-schema)
+
+echo ""
+echo "Successfully installed IME files to $rime_frontend"

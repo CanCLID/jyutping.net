@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-echo ""
-echo "Installing IME files..."
-curl -fsSL https://git.io/rime-install | rime_frontend="$rime_frontend" bash -s -- \
+curl -fsSL https://git.io/rime-install | bash -s -- \
   cantonese \
   emoji-cantonese \
   CanCLID/rime-loengfan \
@@ -15,6 +13,3 @@ curl -fsSL https://git.io/rime-install | rime_frontend="$rime_frontend" bash -s 
   custom:add:schema=cangjie5 \
   custom:add:schema=stroke \
   custom:add:schema=luna_pinyin
-
-echo ""
-echo "Successfully installed IME files to $rime_frontend"
