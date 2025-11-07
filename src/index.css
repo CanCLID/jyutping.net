@@ -288,6 +288,13 @@ section:not(#hero) {
         @apply leading-relaxed;
       }
     }
+    ul,
+    ol,
+    p {
+      :not(h3) + & {
+        @apply mt-4;
+      }
+    }
   }
 }
 
