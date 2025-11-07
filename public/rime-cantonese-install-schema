@@ -6,10 +6,4 @@ curl -fsSL https://git.io/rime-install | bash -s -- \
   CanCLID/rime-loengfan \
   lotem/rime-octagram-data \
   lotem/rime-octagram-data@hant \
-  custom:set:config=default,key=installed_from,value=rime-cantonese \
-  custom:set:config=default,key=menu/page_size,value=8 \
-  custom:clear_schema_list \
-  custom:add:schema=jyut6ping3 \
-  custom:add:schema=cangjie5 \
-  custom:add:schema=stroke \
-  custom:add:schema=luna_pinyin
+  cantonese@install:default
