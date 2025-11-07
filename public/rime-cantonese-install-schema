@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 
-curl -fsSL https://git.io/rime-install | bash -s -- \
-  cantonese \
-  emoji-cantonese \
-  CanCLID/rime-loengfan \
-  lotem/rime-octagram-data \
-  lotem/rime-octagram-data@hant \
-  cantonese@install:default
+curl -fsSL https://git.io/rime-install | bash -s -- rime/rime-cantonese@install/default-packages.conf
+rm default-packages.conf
