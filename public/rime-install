@@ -7,11 +7,20 @@ if [[ "$OSTYPE" != "linux-gnu"* ]]; then
     exit 1
 fi
 
-# Cross distribution package manager wrapper script
-PACAPT_SCRIPT=$(curl -fsSL https://github.com/icy/pacapt/raw/ng/pacapt)
+if command -v pacman &> /dev/null; then
+    PACAPT="pacman"
+elif command -v pacapt &> /dev/null; then
+    PACAPT="pacapt"
+else
+    PACAPT=$(mktemp)
+    # Cross distribution package manager wrapper script
+    curl -fsSL https://github.com/icy/pacapt/raw/ng/pacapt -o "$PACAPT"
+    chmod 755 "$PACAPT"
+    trap "rm -f '$PACAPT'" EXIT
+fi
 
 pacapt() {
-    bash -c "$PACAPT_SCRIPT" -- "$@"
+    "$PACAPT" "$@"
 }
 
 echo "Updating package list..."
@@ -57,11 +66,16 @@ install_fcitx5() {
 }
 
 check_ibus_available() {
-    pacapt -Ss ibus ibus-rime &> /dev/null
+    pacapt -Si ibus &> /dev/null && \
+    pacapt -Si ibus-rime &> /dev/null
 }
 
 check_fcitx5_available() {
-    pacapt -Ss fcitx5 fcitx5-rime fcitx5-qt fcitx5-gtk fcitx5-configtool &> /dev/null
+    pacapt -Si fcitx5 &> /dev/null && \
+    pacapt -Si fcitx5-rime &> /dev/null && \
+    pacapt -Si fcitx5-qt &> /dev/null && \
+    pacapt -Si fcitx5-gtk &> /dev/null && \
+    pacapt -Si fcitx5-configtool &> /dev/null
 }
 
 case "$FRONTEND" in
