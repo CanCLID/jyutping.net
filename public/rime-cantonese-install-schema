@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+curl -fsSL https://git.io/rime-install | bash -s -- rime/rime-cantonese@install/default-packages.conf
+rm default-packages.conf
