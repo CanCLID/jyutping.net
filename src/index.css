@@ -31,7 +31,7 @@
   }
 
   kbd {
-    @apply kbd kbd-sm align-text-bottom;
+    @apply kbd kbd-sm text-[0.7em] leading-normal align-text-bottom;
   }
 
   pre {
@@ -39,11 +39,11 @@
   }
 
   code {
-    @apply px-1 py-0.5 text-base text-gray-800 bg-gray-100 align-text-bottom rounded select-all;
+    @apply px-1 py-0.5 text-[0.7em] leading-normal text-gray-800 bg-gray-100 align-text-bottom rounded select-all;
   }
 
   var {
-    @apply badge badge-outline badge-lg text-gray-600 not-italic font-normal align-text-bottom;
+    @apply badge badge-outline badge-lg text-[0.8em] leading-normal text-gray-600 not-italic font-normal align-text-bottom;
   }
 
   a {
