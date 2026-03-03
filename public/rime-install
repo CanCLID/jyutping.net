@@ -31,7 +31,7 @@ echo "Updating package list..."
 sudo_pacapt -Sy
 
 if ! command -v git &> /dev/null; then
-    sudo_pacapt -S git --noconfirm
+    sudo_pacapt -S git
 fi
 
 FRONTEND="${1:-ibus}"
@@ -47,7 +47,7 @@ fi
 
 install_ibus() {
     echo "Installing ibus/ibus-rime..."
-    if sudo_pacapt -S ibus ibus-rime --noconfirm; then
+    if sudo_pacapt -S ibus ibus-rime; then
         echo ""
         echo "Successfully installed ibus/ibus-rime"
         export rime_frontend="ibus-rime"
@@ -59,7 +59,7 @@ install_ibus() {
 
 install_fcitx5() {
     echo "Installing fcitx5/fcitx5-rime..."
-    if sudo_pacapt -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-rime --noconfirm; then
+    if sudo_pacapt -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-rime; then
         echo ""
         echo "Successfully installed fcitx5/fcitx5-rime"
         export rime_frontend="fcitx5-rime"
