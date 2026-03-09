@@ -243,7 +243,7 @@ section:not(#hero) {
       @apply text-4xl lg:text-5xl font-semibold;
     }
     h3 {
-      @apply mt-8 text-2xl font-semibold text-gray-700;
+      @apply mt-8 text-2xl font-semibold text-gray-700 space-y-2;
     }
     p {
       @apply mt-8 text-xl leading-relaxed;
