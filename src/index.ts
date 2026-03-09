@@ -46,12 +46,13 @@ let thumbContentRatio: number;
 const colors = ["#ffbb5c", "#ffde69", "#a55cff", "#75caff", "#6f37b3", "#5b91b3"];
 const divs = data.map(({ w, x, y, z }) => {
   const div = document.createElement("div");
-  div.textContent = w;
+  div.dataset["text"] = w;
   div.style.color = colors[z];
   div.style.left = x + "vw";
   div.style.top = y + "vw";
   div.style.transform = `translateZ(-${(+z + 1) * 5}vw)`;
   div.className = "background-text";
+  div.ariaHidden = "true";
   container.appendChild(div);
   return div;
 });
